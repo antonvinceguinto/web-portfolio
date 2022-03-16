@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { Spacer } from '@nextui-org/react';
 import Navbar from '../components/Navbar';
-import TwitterCard from '../components/TwitterCard';
+import BusinessCard from '../components/BusinessCard';
 
 export default function Home() {
   const introduction = (
@@ -22,16 +22,15 @@ export default function Home() {
         </div>
         <Spacer y={0.9} />
         <div className='text-gray-400'>
-          I develop websites and decentralized applications.
+        Dapp | Web3 content | Learning Blockchain👨‍💻.
         </div>
       </div>
       <Spacer y={2} />
       <Spacer x={3} />
       <div className='sm:grid lg:grid-cols-2 gap-3'>
-        <TwitterCard />
-        <TwitterCard />
-        <TwitterCard />
-        <TwitterCard />
+        <BusinessCard username='@antonguinto' url='https://twitter.com/antonguinto' hasFollowers={true} footer='Twitter'/>
+        <BusinessCard username='@guinto' url='https://www.linkedin.com/in/guinto/' image='/images/linkedin-me.jpg' footer='Linkedin'/>
+        <BusinessCard username='@antonvinceguinto' url='https://github.com/antonvinceguinto' image='/images/github-me.jpg' footer='Github'/>
       </div>
     </div>
   );
