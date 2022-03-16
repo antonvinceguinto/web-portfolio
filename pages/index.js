@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <React.Fragment>
       <Head>
-        <title>Anton G.</title>
+        <title>Anton Guinto</title>
         <meta name='anton-guinto' content={`Anton's Portfolio`} />
         <link rel='icon' href='/favicon.ico' />
       </Head>

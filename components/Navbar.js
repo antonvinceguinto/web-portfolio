@@ -11,8 +11,8 @@ export default function Navbar() {
       <div className='text-2xl uppercase'>Anton Guinto</div>
       <Spacer y={1} />
       <nav className='flex gap-5 items-center justify-center uppercase font-bold'>
-        <div>{navItem('Home')}</div>/<div>{navItem('Portfolio')}</div>/
-        <div>{navItem('About')}</div>
+        <div>{navItem('Home')}</div>/<div>{navItem('Projects')}</div>/
+        <div>{navItem('Contact')}</div>
       </nav>
     </div>
   );
