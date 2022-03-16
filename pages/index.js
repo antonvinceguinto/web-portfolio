@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Spacer } from '@nextui-org/react';
 import Navbar from '../components/Navbar';
 import Introduction from '../components/Introduction';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
@@ -23,15 +24,17 @@ export default function Home() {
         //   backgroundSize: 'contain',
         // }}
       >
-        <div
-          className='flex flex-col pb-8 pt-16  text-white min-h-screen aboslute'
-          style={{ backdropFilter: 'blur(30px)' }}
-        >
+        <div className='flex flex-col pb-8 pt-16 text-white min-h-screen aboslute'>
           <Navbar />
           <div className='items-center justify-center flex-col flex'>
-            <div className='flex-col text-center items-center justify-center mt-7 md:mt-24'>
-              <Introduction/>
-            </div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className='flex-col text-center items-center justify-center mt-7 md:mt-24'
+            >
+              <Introduction />
+            </motion.div>
           </div>
         </div>
       </main>
