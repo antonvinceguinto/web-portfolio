@@ -13,8 +13,6 @@ export default function BusinessCard({
 }) {
   return (
     <motion.div
-      animate={{
-      }}
       whileHover={{
         position: 'relative',
         zIndex: 2,
@@ -32,7 +30,9 @@ export default function BusinessCard({
       }}
       className='items-center text-center justify-center flex mt-1 rounded-xl cursor-pointer'
     >
-      <div className='bg-[#000000] rounded-xl p-4 flex-col flex text-left text-white'>
+      <div
+        className={`bg-[#000000] rounded-xl p-4 flex-col flex text-left text-white`}
+      >
         <div className='flex'>
           <Avatar src={image} size='md' style={{ zIndex: '1' }} />
           <Spacer x={0.9} />

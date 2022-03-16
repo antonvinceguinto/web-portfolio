@@ -24,7 +24,7 @@ export default function Home() {
         //   backgroundSize: 'contain',
         // }}
       >
-        <div className='flex flex-col pb-8 pt-16 text-white min-h-screen aboslute'>
+        <div className='flex flex-col pb-8 pt-16 text-white min-h-screen'>
           <Navbar />
           <div className='items-center justify-center flex-col flex'>
             <motion.div
