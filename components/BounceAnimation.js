@@ -6,7 +6,7 @@ export default function BounceLayout({ children }) {
       y: 300,
     },
     onscreen: {
-      y: 50,
+      y: 10,
       transition: {
         type: 'spring',
         bounce: 0.4,
