@@ -22,15 +22,30 @@ export default function Home() {
         </div>
         <Spacer y={0.9} />
         <div className='text-gray-400'>
-        Dapp | Web3 content | Learning Blockchain👨‍💻.
+          Dapp | Web3 content | Learning Blockchain👨‍💻.
         </div>
       </div>
       <Spacer y={2} />
       <Spacer x={3} />
       <div className='sm:grid lg:grid-cols-2 gap-3'>
-        <BusinessCard username='@antonguinto' url='https://twitter.com/antonguinto' hasFollowers={true} footer='Twitter'/>
-        <BusinessCard username='@guinto' url='https://www.linkedin.com/in/guinto/' image='/images/linkedin-me.jpg' footer='Linkedin'/>
-        <BusinessCard username='@antonvinceguinto' url='https://github.com/antonvinceguinto' image='/images/github-me.jpg' footer='Github'/>
+        <BusinessCard
+          username='@antonguinto'
+          url='https://twitter.com/antonguinto'
+          hasFollowers={true}
+          footer='Twitter'
+        />
+        <BusinessCard
+          username='@guinto'
+          url='https://www.linkedin.com/in/guinto/'
+          image='/images/linkedin-me.jpg'
+          footer='Linkedin'
+        />
+        <BusinessCard
+          username='@antonvinceguinto'
+          url='https://github.com/antonvinceguinto'
+          image='/images/github-me.jpg'
+          footer='Github'
+        />
       </div>
     </div>
   );
@@ -42,11 +57,24 @@ export default function Home() {
         <meta name='anton-guinto' content={`Anton's Portfolio`} />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className='flex flex-col pb-8 pt-16 bg-black text-white min-h-screen'>
-        <Navbar />
-        <div className='items-center justify-center flex-col flex'>
-          <div className='flex-col text-center items-center justify-center mt-7 md:mt-24'>
-            {introduction}
+      <main
+        style={{
+          backgroundImage: 'url(/images/bg-image.jpg)',
+          position: 'relative',
+          height: '100%',
+          width: '100%',
+          backgroundSize: 'contain',
+        }}
+      >
+        <div
+          className='flex flex-col pb-8 pt-16  text-white min-h-screen aboslute'
+          style={{ backdropFilter: 'blur(30px)' }}
+        >
+          <Navbar />
+          <div className='items-center justify-center flex-col flex'>
+            <div className='flex-col text-center items-center justify-center mt-7 md:mt-24'>
+              {introduction}
+            </div>
           </div>
         </div>
       </main>
