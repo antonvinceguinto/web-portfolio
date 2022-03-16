@@ -7,7 +7,7 @@ import TwitterCard from '../components/TwitterCard';
 
 export default function Home() {
   const introduction = (
-    <div className='lg:flex justify-around w-screen items-center lg:px-56'>
+    <div className='lg:flex justify-around items-center lg:px-56 px-10'>
       <div className='items-start lg:text-left flex-col'>
         <div className='text-[1.9rem] lg:text-[3rem] font-bold flex-1 flex-col flex text-start lg:items-start'>
           <div>
@@ -26,7 +26,8 @@ export default function Home() {
         </div>
       </div>
       <Spacer y={2} />
-      <div className='grid grid-cols-2 gap-2'>
+      <Spacer x={3} />
+      <div className='sm:grid lg:grid-cols-2 gap-3'>
         <TwitterCard />
         <TwitterCard />
         <TwitterCard />

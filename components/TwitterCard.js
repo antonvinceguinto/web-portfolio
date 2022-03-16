@@ -4,7 +4,7 @@ import { Spacer, Avatar, Button } from '@nextui-org/react';
 
 export default function BusinessCard() {
   return (
-    <div className='items-center justify-center flex'>
+    <div className='items-center justify-center flex mt-1'>
       <div className='bg-gray-900 rounded-xl p-4 flex-col flex text-white'>
         <div className='flex'>
           <Avatar src='/images/memoji.jpg' size='md' />
