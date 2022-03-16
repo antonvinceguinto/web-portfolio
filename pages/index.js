@@ -38,6 +38,7 @@ export default function Home() {
           username='@guinto'
           url='https://www.linkedin.com/in/guinto/'
           image='/images/linkedin-me.jpg'
+          buttonLabel='Connect'
           footer='Linkedin'
         />
         <BusinessCard

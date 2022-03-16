@@ -7,6 +7,7 @@ export default function BusinessCard({
   url,
   footer = 'Visit me',
   image = '/images/memoji.jpg',
+  buttonLabel = 'Follow'
 }) {
   return (
     <div className='items-center text-center justify-center flex mt-1'>
@@ -22,7 +23,7 @@ export default function BusinessCard({
           <div className='flex justify-center items-center'>
             <Button rounded size='sm' auto>
               <a target='_blank' href={url} rel='noopener noreferrer'>
-                <div className='text-xs px-2'>Follow</div>
+                <div className='text-xs px-2'>{buttonLabel}</div>
               </a>
             </Button>
           </div>
