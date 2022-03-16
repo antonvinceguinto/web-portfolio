@@ -1,6 +1,7 @@
 import React from 'react';
 import { Spacer } from '@nextui-org/react';
 import BusinessCard from './BusinessCard';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 export default function Introduction() {
   return (
@@ -30,6 +31,7 @@ export default function Introduction() {
           url='https://twitter.com/antonguinto'
           hasFollowers={true}
           footer='Twitter'
+          icon={<FaTwitter />}
         />
         <BusinessCard
           username='@guinto'
@@ -37,12 +39,14 @@ export default function Introduction() {
           image='/images/linkedin-me.jpg'
           buttonLabel='Connect'
           footer='Linkedin'
+          icon={<FaLinkedin />}
         />
         <BusinessCard
           username='@antonvinceguinto'
           url='https://github.com/antonvinceguinto'
           image='/images/github-me.jpg'
           footer='Github'
+          icon={<FaGithub />}
         />
       </div>
     </div>

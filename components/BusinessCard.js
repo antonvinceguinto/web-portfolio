@@ -7,11 +7,12 @@ export default function BusinessCard({
   url,
   footer = 'Visit me',
   image = '/images/memoji.jpg',
-  buttonLabel = 'Follow'
+  buttonLabel = 'Follow',
+  icon,
 }) {
   return (
     <div className='items-center text-center justify-center flex mt-1'>
-      <div className='bg-gray-900 rounded-xl p-4 flex-col flex text-left text-white'>
+      <div className='bg-[#000000] rounded-xl p-4 flex-col flex text-left text-white'>
         <div className='flex'>
           <Avatar src={image} size='md' />
           <Spacer x={0.9} />
@@ -31,11 +32,14 @@ export default function BusinessCard({
         <Spacer y={0.6} />
         <div className='text-xs pl-2 text-gray-400'>
           Web developer. Learning Web3 development.
-          <div>I also do Flutter  development.</div>
+          <div>I also do Flutter development.</div>
         </div>
         <Spacer y={0.3} />
         {footer && (
-          <div className='text-xs font-bold pl-2 text-gray-400'>{footer}</div>
+          <div className='flex justify-between items-center'>
+            <div className='text-xs font-bold pl-2 text-gray-400'>{footer}</div>
+            {icon}
+          </div>
         )}
       </div>
     </div>

@@ -14,13 +14,14 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main
-        style={{
-          backgroundImage: 'url(/images/bg-image.jpg)',
-          position: 'relative',
-          height: '100%',
-          width: '100%',
-          backgroundSize: 'contain',
-        }}
+        className='bg-gray-900'
+        // style={{
+        //   backgroundImage: 'url(/images/bg-image.jpg)',
+        //   position: 'relative',
+        //   height: '100%',
+        //   width: '100%',
+        //   backgroundSize: 'contain',
+        // }}
       >
         <div
           className='flex flex-col pb-8 pt-16  text-white min-h-screen aboslute'
