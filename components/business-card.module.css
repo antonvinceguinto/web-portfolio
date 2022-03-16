@@ -1,4 +1,4 @@
-@media (min-width: 1080px) {
+@media (min-width: 760px) {
   .floatingTwitter {
     animation-name: floating;
     animation-duration: 3s;
