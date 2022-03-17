@@ -37,8 +37,8 @@ export default function Navbar() {
               left-0 md:left-0 md:bg-transparent md:w-auto w-full 
               md:static absolute z-[2] md:z-auto py-3 md:py-0
               md:opacity-100 ${
-                isMenuOpen ? 'opacity-100 top-[70px]' : 'opacity-0'
-              } top-[-400px] transition-all ease-in duration-200`}
+                isMenuOpen ? 'opacity-100 top-[70px]' : 'opacity-0 top-[-400px]'
+              } transition-all ease-in duration-200`}
               style={{backdropFilter: 'blur(5px)'}}
       >
         {navItem('Home')}
