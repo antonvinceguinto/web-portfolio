@@ -9,7 +9,7 @@ import cardStyles from './business-card.module.css';
 export default function Introduction() {
   return (
     <BounceAnimation>
-      <div className='lg:flex justify-around items-center lg:px-56 lg:mt-24 px-10'>
+      <div className='lg:flex justify-around items-center lg:px-16 lg:mt-24 px-10'>
         <div className='items-start lg:text-left flex-col'>
           <div className='text-[1.6rem] lg:text-[3rem] font-bold flex-1 flex-col flex text-start lg:items-start'>
             <div>
