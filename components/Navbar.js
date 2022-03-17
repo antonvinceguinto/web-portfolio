@@ -39,7 +39,7 @@ export default function Navbar() {
               md:opacity-100 ${
                 isMenuOpen ? 'opacity-100 top-[70px]' : 'opacity-0 top-[-400px]'
               } transition-all ease-in duration-200`}
-              style={{backdropFilter: 'blur(5px)'}}
+        style={{ backdropFilter: 'blur(5px) contrast(60%)' }}
       >
         {navItem('Home')}
         {navItem('Projects')}
