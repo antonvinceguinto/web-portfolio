@@ -16,7 +16,7 @@ export const Projects: React.FC = () => {
           bordered
           shadow={false}
           hoverable
-          css={{ backgroundColor: 'rgb(31 41 55 / 1)', border: 'none' }}
+          css={{ backgroundColor: '#1F2937', border: 'none' }}
         >
           <div className='flex-col p-2 text-white'>
             <div className='font-bold text-2xl'>
@@ -50,7 +50,7 @@ export const Projects: React.FC = () => {
 
   return (
     <BounceAnimation>
-      <div className='flex-col'>
+      <div className='flex-col flex min-h-[60vh] items-start justify-center pb-5'>
         <div className='text-[1.6rem] lg:text-[3rem] font-bold'>Projects</div>
         <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-8'>
           {projectItem({

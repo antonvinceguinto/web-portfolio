@@ -4,6 +4,7 @@ import { Introduction } from '../components/Introduction';
 import { motion } from 'framer-motion';
 import { Projects } from '../components/Projects';
 import { LetsWorkTogether } from './../components/LetsWorkTogether';
+import { Spacer } from '@nextui-org/react';
 
 const Home: React.FC = () => {
   return (
@@ -21,18 +22,20 @@ const Home: React.FC = () => {
           viewport={{ once: true }}
           className='pt-7 flex justify-center items-center flex-col'
         >
-          <div className='max-w-[80vw]'>
+          <div className='max-w-[75vw]'>
             <Navbar />
-            <div className='flex flex-col pb-48 md:mt-24'>
+            <div className='flex flex-col pb-16 md:mt-24'>
               <section className='mt-10 md:mt-0'>
                 <Introduction />
               </section>
+              <Spacer y={2} />
               <section>
                 <Projects />
               </section>
-              <section>
-                {/* <LetsWorkTogether /> */}
-              </section>
+              <Spacer y={9} />
+              <footer className='text-center text-gray-400'>
+                Anton Vince Guinto © 2022
+              </footer>
             </div>
           </div>
         </motion.div>

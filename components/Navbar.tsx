@@ -10,7 +10,14 @@ export const Navbar: React.FC = () => {
     <nav className='flex items-center md:justify-between uppercase font-bold lg:px-10'>
       <div className='flex items-center justify-start'>
         <Avatar src='/images/me-pixel.png' size='lg' />
-        <div className='text-2xl uppercase opacity-0 md:opacity-100 md:ml-8'>Anton Guinto</div>
+        <div className='items-center justify-center'>
+          <div className='text-2xl opacity-0 md:opacity-100 md:ml-8'>
+            Anton Guinto
+          </div>
+          <div className='text-sm lowercase font-normal text-gray-500 opacity-0 md:opacity-100 md:ml-8'>
+            antonvinceguinto@gmail.com
+          </div>
+        </div>
       </div>
       <Button color='gradient' auto rounded>
         Contact Me
