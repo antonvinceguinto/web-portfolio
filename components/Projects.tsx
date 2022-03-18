@@ -36,7 +36,7 @@ export const Projects: React.FC = () => {
 
   return (
     <BounceAnimation>
-      <div className='flex-col text-start mt-16 md:mt-0 px-8'>
+      <div className='flex-col text-start md:mt-0 px-8'>
         <div className='text-[1.6rem] lg:text-[3rem] font-bold'>Projects</div>
         <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-8'>
           {projectItem({
