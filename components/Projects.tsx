@@ -9,7 +9,7 @@ export const Projects: React.FC = () => {
     <BounceAnimation>
       <div className='flex flex-col text-start mt-16 md:mt-0'>
         <div className='text-[1.6rem] lg:text-[3rem] font-bold'>Projects</div>
-        <div className='flex justify-around items-start mt-8 bg-orange-400'>
+        <div className='flex justify-around items-start mt-8'>
           {projectItem()}
           {projectItem()}
           {projectItem()}
