@@ -1,7 +1,8 @@
 import '../styles/globals.css';
 import { motion } from 'framer-motion';
+import type { AppProps } from 'next/app';
 
-function MyApp({ Component, pageProps, router }) {
+function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <motion.div
       key={router.route}

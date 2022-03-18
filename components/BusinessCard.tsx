@@ -1,16 +1,26 @@
-import React from 'react';
 import Image from 'next/image';
 import { Spacer, Avatar, Button } from '@nextui-org/react';
 import { motion } from 'framer-motion';
+import { JsxElement } from 'typescript';
+import { IconType } from 'react-icons';
 
-export default function BusinessCard({
+interface CardProps {
+  username: string;
+  url: string;
+  footer: string;
+  image?: string;
+  buttonLabel?: string;
+  icon: IconType;
+}
+
+export const BusinessCard: React.FC<CardProps> = ({
   username = '@antonguinto',
   url,
   footer = 'Visit me',
   image = '/images/memoji.jpg',
   buttonLabel = 'Follow',
   icon,
-}) {
+}) => {
   return (
     <motion.div
       whileHover={{
@@ -51,8 +61,8 @@ export default function BusinessCard({
         </div>
         <Spacer y={0.6} />
         <div className='text-xs pl-2 text-gray-400'>
-          Web developer. Learning Web3 development.
-          <div>I also do Flutter development.</div>
+          Web developer. Learning Web3 and Blockchain
+          <div>development.</div>
         </div>
         <Spacer y={0.3} />
         {footer && (
@@ -64,4 +74,4 @@ export default function BusinessCard({
       </div>
     </motion.div>
   );
-}
+};

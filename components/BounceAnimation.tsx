@@ -1,12 +1,12 @@
-import { motion } from 'framer-motion';
+import { AnimationProps, motion } from 'framer-motion';
 
-export default function BounceLayout({ children }) {
+export const BounceAnimation: React.FC = ({ children }) => {
   const cardVariants = {
     offscreen: {
       y: 300,
     },
     onscreen: {
-      y: 10,
+      y: 0,
       transition: {
         type: 'spring',
         bounce: 0.4,
@@ -21,9 +21,7 @@ export default function BounceLayout({ children }) {
       whileInView='onscreen'
       viewport={{ once: true, amount: 0.8 }}
     >
-      <motion.div variants={cardVariants}>
-        {children}
-      </motion.div>
+      <motion.div variants={cardVariants}>{children}</motion.div>
     </motion.div>
   );
-}
+};

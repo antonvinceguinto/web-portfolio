@@ -3,10 +3,10 @@ import { Spacer } from '@nextui-org/react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
 
-export default function Navbar() {
-  const [isMenuOpen, setisMenuOpen] = useState(false);
+export const Navbar: React.FC = () => {
+  const [isMenuOpen, setisMenuOpen] = useState<boolean>(false);
 
-  const navItem = (label) => {
+  const navItem = (label: String) => {
     return (
       <li className='mx-6 py-3 md:mx-4 md:my-0 cursor-pointer'>
         <a>{label}</a>
@@ -20,8 +20,7 @@ export default function Navbar() {
   };
 
   return (
-    // <div className='flex lg:px-72 sm:px-8 md:flex-row flex-col items-center'>
-    <nav className='md:flex items-center lg:px-36 md:px-14 px-8 md:justify-between uppercase font-bold'>
+    <nav className='md:flex items-center md:justify-between uppercase font-bold'>
       <div className='flex items-center justify-between'>
         <div className='text-2xl uppercase'>Anton Guinto</div>
         <div className='md:hidden block cursor-pointer'>
@@ -48,4 +47,4 @@ export default function Navbar() {
     </nav>
     // </div>
   );
-}
+};
