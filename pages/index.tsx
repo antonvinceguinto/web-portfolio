@@ -22,7 +22,7 @@ const Home: React.FC = () => {
           viewport={{ once: true }}
           className='pt-7 flex justify-center items-center flex-col'
         >
-          <div className='max-w-[90vw]'>
+          <div className='max-w-[80vw]'>
             <Navbar />
             <div className='flex flex-col pb-48 md:mt-24'>
               <section className='mt-10 md:mt-0'>

@@ -9,7 +9,7 @@ import cardStyles from './business-card.module.css';
 export const Introduction: React.FC = () => {
   return (
     <BounceAnimation>
-      <div className='lg:flex justify-around lg:mt-16 min-h-[70vh]'>
+      <div className='lg:flex justify-around lg:mt-16 min-h-[60vh]'>
         <div className='items-start lg:text-left flex-col'>
           <div className='text-[1.6rem] lg:text-[3rem] font-bold flex-1 flex-col flex text-center md:items-start'>
             <div className='text-[#FF4A57] text-lg font-extrabold'>
