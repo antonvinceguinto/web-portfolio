@@ -1,10 +1,9 @@
 import React from 'react';
 import { Spacer } from '@nextui-org/react';
-import { BusinessCard } from './BusinessCard';
+import { BusinessCard } from './business_card/BusinessCard';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { motion } from 'framer-motion';
 import { BounceAnimation } from './BounceAnimation';
-import cardStyles from './business-card.module.css';
+import cardStyles from './business_card/business-card.module.css';
 
 export const Introduction: React.FC = () => {
   return (

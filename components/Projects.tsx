@@ -11,12 +11,13 @@ export const Projects: React.FC = () => {
     url = '',
   }) => {
     return (
-      <Card
-        bordered
-        shadow={false}
-        hoverable
-        css={{ backgroundColor: 'rgb(31 41 55 / 1)', border: 'none',}}
-      >
+      <div className='mt-6 md:mt-0'>
+        <Card
+          bordered
+          shadow={false}
+          hoverable
+          css={{ backgroundColor: 'rgb(31 41 55 / 1)', border: 'none' }}
+        >
           <div className='flex-col p-2 text-white'>
             <div className='font-bold text-2xl'>
               <div className='flex justify-between'>
@@ -42,13 +43,14 @@ export const Projects: React.FC = () => {
               </a>
             </div>
           </div>
-      </Card>
+        </Card>
+      </div>
     );
   };
 
   return (
     <BounceAnimation>
-      <div className='flex-col text-start md:mt-0 px-8'>
+      <div className='flex-col'>
         <div className='text-[1.6rem] lg:text-[3rem] font-bold'>Projects</div>
         <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-8'>
           {projectItem({

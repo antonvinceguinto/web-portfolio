@@ -3,8 +3,7 @@ import { Navbar } from '../components/Navbar';
 import { Introduction } from '../components/Introduction';
 import { motion } from 'framer-motion';
 import { Projects } from '../components/Projects';
-
-import React from 'react';
+import { LetsWorkTogether } from './../components/LetsWorkTogether';
 
 const Home: React.FC = () => {
   return (
@@ -30,6 +29,9 @@ const Home: React.FC = () => {
               </section>
               <section>
                 <Projects />
+              </section>
+              <section>
+                {/* <LetsWorkTogether /> */}
               </section>
             </div>
           </div>
