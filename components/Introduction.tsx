@@ -10,7 +10,7 @@ export const Introduction: React.FC = () => {
     <BounceAnimation>
       <div className='lg:flex justify-between min-h-[60vh] items-center'>
         <div className='items-start lg:text-left flex-col'>
-          <div className='text-[1.6rem] lg:text-[3rem] font-bold flex-1 flex-col flex text-center md:items-start'>
+          <div className='text-[1.6rem] lg:text-[3rem] font-bold flex-1 flex-col flex text-center md:text-left md:items-start'>
             <div className='text-[#FF4A57] text-lg font-extrabold'>
               WELCOME!
             </div>
@@ -32,7 +32,7 @@ export const Introduction: React.FC = () => {
         <Spacer y={1} />
         <Spacer x={3} />
         <div>
-          <div className='sm:grid lg:grid-cols-2 gap-3'>
+          <div className='sm:grid xl:grid-cols-2 lg:grid gap-3'>
             <div className={cardStyles.floatingTwitter}>
               <BusinessCard
                 username='@antonguinto'
@@ -52,7 +52,7 @@ export const Introduction: React.FC = () => {
               />
             </div>
             <div
-              className={`${cardStyles.floatingGithub} md:col-span-2 md:mt-2`}
+              className={`${cardStyles.floatingGithub} xl:col-span-2 lg:mt-2`}
             >
               <BusinessCard
                 username='@antonvinceguinto'
