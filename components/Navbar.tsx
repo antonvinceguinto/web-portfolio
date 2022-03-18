@@ -7,7 +7,7 @@ export const Navbar: React.FC = () => {
   const [isContactModalOpen, setisContactModalOpen] = useState<boolean>(false);
 
   return (
-    <nav className='flex items-center md:justify-between uppercase font-bold'>
+    <nav className='flex items-center md:justify-between uppercase font-bold px-10'>
       <div className='flex items-center justify-start'>
         <Avatar src='/images/me-pixel.png' size='lg' />
         <div className='text-2xl uppercase opacity-0 md:opacity-100 md:ml-8'>Anton Guinto</div>

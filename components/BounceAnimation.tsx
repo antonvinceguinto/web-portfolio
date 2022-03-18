@@ -3,7 +3,7 @@ import { AnimationProps, motion } from 'framer-motion';
 export const BounceAnimation: React.FC = ({ children }) => {
   const cardVariants = {
     offscreen: {
-      y: 300,
+      y: 200,
     },
     onscreen: {
       y: 0,
