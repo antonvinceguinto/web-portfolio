@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { Projects } from '../components/Projects';
 import { LetsWorkTogether } from './../components/LetsWorkTogether';
 import { Spacer } from '@nextui-org/react';
+import { BounceAnimation } from '../components/BounceAnimation';
+import { Skills } from '../components/Skills';
 
 const Home: React.FC = () => {
   return (
@@ -28,7 +30,11 @@ const Home: React.FC = () => {
               <section className='mt-10 md:mt-0'>
                 <Introduction />
               </section>
-              <Spacer y={2} />
+              <Spacer y={4} />
+              <section>
+                <Skills />
+              </section>
+              <Spacer y={4} />
               <section>
                 <Projects />
               </section>
