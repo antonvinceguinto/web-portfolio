@@ -9,6 +9,7 @@ export const Projects: React.FC = () => {
     date = '',
     description = '',
     url = '',
+    techStack = [''],
   }) => {
     return (
       <div className='mt-6 md:mt-0'>
@@ -37,10 +38,15 @@ export const Projects: React.FC = () => {
             <Spacer y={0.6} />
             <div className='text-gray-400'>{description}</div>
             <Spacer y={0.5} />
-            <div className='text-[#F8CA1C] text-sm'>
+            <div className='text-[#F8CA1C] text-sm flex justify-between'>
               <a target='_blank' href={url} rel='noopener noreferrer'>
                 Visit Project ↗
               </a>
+              <div className='text-[#F8CA1C] flex gap-4 flex-wrap justify-end'>
+                {techStack.map((tech) => (
+                  <div key={tech} className='p-1 px-2 rounded bg-[#151c25]'>#{tech}</div>
+                ))}
+              </div>
             </div>
           </div>
         </Card>
@@ -60,6 +66,7 @@ export const Projects: React.FC = () => {
             description:
               'A web3 project that mints erc721 tokens(a.k.a NFTs). Collect filipino inspired NFTs living inside Polygon Matic chain.',
             url: 'https://official-crypto-odyssey-nft.vercel.app/',
+            techStack: ['reactjs', 'nextjs', 'solidity', 'tailwind'],
           })}
           {projectItem({
             framework: 'Flutter',
@@ -68,6 +75,7 @@ export const Projects: React.FC = () => {
             description:
               'A flutter app that tracks SLP from a wallet. This was made for an NFT game Axie Infinity and is made using flutter',
             url: 'https://play.google.com/store/apps/details?id=com.gdgapps.axiescholartracker',
+            techStack: ['flutter', 'android', 'ios'],
           })}
           {projectItem({
             framework: 'Flutter',
@@ -76,6 +84,7 @@ export const Projects: React.FC = () => {
             description:
               'A social app for Nutriasia employees to share their ideas in the company.',
             url: 'https://play.google.com/store/apps/details?id=com.nutriasia.naiiba',
+            techStack: ['flutter', 'android', 'ios'],
           })}
           {projectItem({
             framework: 'Flutter',
@@ -84,6 +93,7 @@ export const Projects: React.FC = () => {
             description:
               'An insurance app for Cebuana Lhuillier. Get insured thru using the app.',
             url: 'https://play.google.com/store/apps/details?id=com.ncvi.protectnow&hl=en_US&gl=US',
+            techStack: ['flutter', 'android', 'ios'],
           })}
         </div>
       </div>

@@ -3,12 +3,11 @@ import { Navbar } from '../components/Navbar';
 import { Introduction } from '../components/Introduction';
 import { motion } from 'framer-motion';
 import { Projects } from '../components/Projects';
-import { LetsWorkTogether } from './../components/LetsWorkTogether';
 import { Spacer } from '@nextui-org/react';
-import { BounceAnimation } from '../components/BounceAnimation';
 import { Skills } from '../components/Skills';
+import type { NextPage } from 'next';
 
-const Home: React.FC = () => {
+const Home: NextPage = () => {
   return (
     <>
       <Head>
