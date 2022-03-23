@@ -44,7 +44,9 @@ export const Projects: React.FC = () => {
               </a>
               <div className='text-[#F8CA1C] flex gap-4 flex-wrap justify-end'>
                 {techStack.map((tech) => (
-                  <div key={tech} className='p-1 px-2 rounded bg-[#151c25]'>#{tech}</div>
+                  <div key={tech} className='p-1 px-2 rounded bg-[#151c25]'>
+                    #{tech}
+                  </div>
                 ))}
               </div>
             </div>
