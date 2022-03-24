@@ -67,7 +67,7 @@ export const Projects: React.FC = () => {
             date: '2022-present / Personal',
             description:
               'A web3 project that mints erc721 tokens(a.k.a NFTs). Collect filipino inspired NFTs living inside Polygon Matic chain.',
-            url: 'https://official-crypto-odyssey-nft.vercel.app/',
+            url: 'https://sandatahan.vercel.app/',
             techStack: ['reactjs', 'nextjs', 'solidity', 'tailwind'],
           })}
           {projectItem({
