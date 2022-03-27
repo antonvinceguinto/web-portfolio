@@ -63,11 +63,11 @@ export const Projects: React.FC = () => {
         <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-8'>
           {projectItem({
             framework: 'React',
-            title: 'Sandatahan NFT (Minting website)',
+            title: 'Mutya NFT (Minting website)',
             date: '2022-present / Personal',
             description:
               'A web3 project that mints erc721 tokens(a.k.a NFTs). Collect filipino inspired NFTs living inside Polygon Matic chain.',
-            url: 'https://sandatahan.vercel.app/',
+            url: 'https://mutya.vercel.app/',
             techStack: ['reactjs', 'nextjs', 'solidity', 'tailwind'],
           })}
           {projectItem({
