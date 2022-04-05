@@ -23,21 +23,21 @@ const Home: NextPage = () => {
           viewport={{ once: true }}
           className='pt-7 flex justify-center items-center flex-col'
         >
-          <div className='max-w-[75vw]'>
+          <div className='max-w-[70vw]'>
             <Navbar />
             <div className='flex flex-col pb-16 md:mt-24'>
               <section className='mt-10 md:mt-0'>
                 <Introduction />
               </section>
-              <Spacer y={4} />
+              <Spacer y={5} />
               <section>
                 <Skills />
               </section>
-              <Spacer y={4} />
+              <Spacer y={3} />
               <section>
                 <Projects />
               </section>
-              <Spacer y={9} />
+              <Spacer y={4} />
               <footer className='text-center text-gray-400'>
                 Anton Vince Guinto © 2022
               </footer>

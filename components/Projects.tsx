@@ -57,13 +57,13 @@ export const Projects: React.FC = () => {
   };
 
   return (
-    <BounceAnimation>
-      <div className='flex-col flex md:min-h-[60vh] items-start justify-center pb-5'>
+    <>
+      <div className='flex-col flex md:min-h-[30vh] items-start justify-center pb-5'>
         <div className='text-[1.6rem] lg:text-[3rem] font-bold'>Projects</div>
         <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-8'>
           {projectItem({
             framework: 'React',
-            title: 'Sandatahan NFT (Minting website)',
+            title: 'Mutya NFT (Minting website)',
             date: '2022-present / Personal',
             description:
               'A web3 project that mints erc721 tokens(a.k.a NFTs). Collect filipino inspired NFTs living inside Polygon Matic chain.',
@@ -97,8 +97,17 @@ export const Projects: React.FC = () => {
             url: 'https://play.google.com/store/apps/details?id=com.ncvi.protectnow&hl=en_US&gl=US',
             techStack: ['flutter', 'android', 'ios'],
           })}
+          {projectItem({
+            framework: 'Flutter',
+            title: 'Bar Points',
+            date: '2020 / ThinkBIT Solutions Inc.',
+            description:
+              "BarPoints is the new way to explore your city's nightlife and get rewarded for it!",
+            url: 'https://play.google.com/store/apps/details?id=app.barcast.BarPoints&hl=en_US&gl=US',
+            techStack: ['flutter', 'android', 'ios'],
+          })}
         </div>
       </div>
-    </BounceAnimation>
+    </>
   );
 };
