@@ -99,7 +99,7 @@ export const Projects: React.FC = () => {
           })}
           {projectItem({
             framework: 'Flutter',
-            title: 'Bar Points',
+            title: 'Barpoints',
             date: '2020 / ThinkBIT Solutions Inc.',
             description:
               "BarPoints is the new way to explore your city's nightlife and get rewarded for it!",
