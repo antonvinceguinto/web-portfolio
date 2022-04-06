@@ -22,6 +22,7 @@ export const Skills: React.FC = () => {
           {skill('Typescript')}
           {skill('Flutter')}
           {skill('API Integration')}
+          {skill('Firebase')}
         </div>
       </div>
     </>
