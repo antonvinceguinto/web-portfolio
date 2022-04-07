@@ -19,6 +19,7 @@ export const Skills: React.FC = () => {
           {skill('Solidity')}
           {skill('Version Control')}
           {skill('Tailwind CSS')}
+          {skill('SCSS')}
           {skill('Typescript')}
           {skill('Flutter')}
           {skill('API Integration')}
