@@ -23,8 +23,10 @@ const Home: NextPage = () => {
           viewport={{ once: true }}
           className='pt-7 flex justify-center items-center flex-col'
         >
-          <div className='max-w-[70vw]'>
-            <Navbar />
+          <div className='max-w-[80vw] md:max-w-[70vw]'>
+            <div className='flex justify-center items-center'>
+              <Navbar />
+            </div>
             <div className='flex flex-col pb-16 md:mt-24'>
               <section className='mt-10 md:mt-0'>
                 <Introduction />

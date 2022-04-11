@@ -11,7 +11,7 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className='flex items-center sm:justify-center md:justify-between uppercase font-bold '>
+    <>
       <Modal
         closeButton
         blur
@@ -41,20 +41,26 @@ export const Navbar: React.FC = () => {
           </Button>
         </Modal.Footer>
       </Modal>
-      <div className='flex items-center justify-start'>
-        <Avatar src='/images/me-pixel.png' size='lg' />
-        <div className='items-center justify-center'>
-          <div className='text-2xl opacity-0 md:opacity-100 md:ml-8'>
-            Anton Guinto
+      <div className='flex min-w-full relative'>
+        <nav className='flex items-center justify-between uppercase font-bold'>
+          <div className='flex items-center justify-start'>
+            <Avatar src='/images/me-pixel.png' size='lg' />
+            <div className='items-center justify-center'>
+              <div className='text-2xl opacity-0 md:opacity-100 md:ml-8'>
+                Anton Guinto
+              </div>
+              <div className='text-sm lowercase font-normal text-gray-500 opacity-0 md:opacity-100 md:ml-8'>
+                antonvinceguinto@gmail.com
+              </div>
+            </div>
           </div>
-          <div className='text-sm lowercase font-normal text-gray-500 opacity-0 md:opacity-100 md:ml-8'>
-            antonvinceguinto@gmail.com
+          <div className='absolute right-0'>
+            <Button color='gradient' auto rounded onClick={handler}>
+              Contact Me
+            </Button>
           </div>
-        </div>
+        </nav>
       </div>
-      <Button color='gradient' auto rounded onClick={handler}>
-        Contact Me
-      </Button>
-    </nav>
+    </>
   );
 };
