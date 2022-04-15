@@ -1,5 +1,5 @@
 import { BounceAnimation } from './BounceAnimation';
-import { RiFlutterFill, RiReactjsFill } from 'react-icons/ri';
+import { RiFlutterFill, RiReactjsFill, RiGithubFill } from 'react-icons/ri';
 import { Card, Spacer } from '@nextui-org/react';
 
 export const Projects: React.FC = () => {
@@ -28,8 +28,10 @@ export const Projects: React.FC = () => {
                   <Spacer x={0.2} />
                   {framework === 'React' ? (
                     <RiReactjsFill size={16} />
-                  ) : (
+                  ) : framework === 'Flutter' ? (
                     <RiFlutterFill size={16} />
+                  ) : (
+                    <RiGithubFill />
                   )}
                 </div>
               </div>
@@ -40,7 +42,7 @@ export const Projects: React.FC = () => {
             <Spacer y={0.5} />
             <div className='text-[#F8CA1C] text-sm flex justify-between'>
               <a target='_blank' href={url} rel='noopener noreferrer'>
-                Visit Project ↗
+                Visit Project↗
               </a>
               <div className='text-[#F8CA1C] flex gap-4 flex-wrap justify-end'>
                 {techStack.map((tech) => (
@@ -59,7 +61,9 @@ export const Projects: React.FC = () => {
   return (
     <>
       <div className='flex-col flex md:min-h-[30vh] items-start justify-center pb-5'>
-        <div className='text-[1.6rem] lg:text-[3rem] font-bold'>Projects</div>
+        <div className='text-[1.6rem] lg:text-[3rem] font-bold'>
+          Real World Projects
+        </div>
         <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-8'>
           {projectItem({
             framework: 'React',
@@ -105,6 +109,28 @@ export const Projects: React.FC = () => {
               "BarPoints is the new way to explore your city's nightlife and get rewarded for it!",
             url: 'https://play.google.com/store/apps/details?id=app.barcast.BarPoints&hl=en_US&gl=US',
             techStack: ['flutter', 'android', 'ios'],
+          })}
+        </div>
+        <Spacer y={5} />
+        <div className='text-[1.6rem] lg:text-[3rem] font-bold'>
+          Some of my opensource Github projects
+        </div>
+        <div className='sm:grid md:grid-cols-2 w-full gap-9 justify-around items-center mt-8'>
+          {projectItem({
+            framework: 'React',
+            title: 'NextJS Project Template',
+            date: '2022',
+            description: 'A template for starting out a fresh nextjs project.',
+            url: 'https://github.com/antonvinceguinto/project-nextjs-template',
+            techStack: ['nextjs', 'husky', 'tailwind', 'ESLint'],
+          })}
+          {projectItem({
+            framework: 'React',
+            title: 'My Portfolio Website',
+            date: '2022',
+            description: 'Checkout the source code of this website.',
+            url: 'https://github.com/antonvinceguinto/web-portfolio',
+            techStack: ['reactjs', 'portfolio', 'bread'],
           })}
         </div>
       </div>
