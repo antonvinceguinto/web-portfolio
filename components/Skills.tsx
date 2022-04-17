@@ -43,7 +43,7 @@ const Skills: React.FC = () => {
             className={s.skillText}
             style={{ opacity: opacityForBlock(progress, 0) }}
           >
-            I use utilize the power of ReactJS to deliver blazing fast websites
+            I utilize the power of ReactJS to deliver blazing fast websites
             to clients and to display beautiful & interactive user interfaces.
           </div>
           <span
