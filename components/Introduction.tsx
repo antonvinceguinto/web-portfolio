@@ -7,23 +7,25 @@ import cardStyles from './business_card/business-card.module.css';
 
 export const Introduction: React.FC = () => {
   return (
-    <div className='lg:flex justify-between min-h-[40vh] items-center'>
+    <div className='md:flex md:px-10 justify-between items-center min-h-[60vh]'>
       <div className='items-start lg:text-left flex-col'>
-        <div className='text-[1.6rem] lg:text-[3rem] font-bold flex-1 flex-col flex text-center md:text-left md:items-start'>
-          <div className='text-[#FF4A57] text-lg font-extrabold'>WELCOME!</div>
-          <div>
-            {`I'm`} a <span className='text-gradient'>Web Developer</span>
+        <div className='gap-8 text-4xl md:text-5xl font-extrabold flex-1 flex-col flex text-center md:text-left md:items-start'>
+          <div className='text-[#FF4A57] text-lg md:text-xl font-extrabold'>
+            WELCOME!
           </div>
           <div>
-            I use <span className='text-gradient'>React, Nextjs</span>
+            {`I'm`} a <span className='text-gradient'>Front End Engineer.</span>
           </div>
           <div>
-            and learning <span className='text-gradient'>Solidity.</span>
+            I use <span className='text-gradient'>ReactJS.</span>
+          </div>
+          <div>
+            Learning <span className='text-gradient'>Solidity.</span>
           </div>
         </div>
         <Spacer y={0.9} />
         <div className='text-gray-400 text-center md:text-left'>
-          Dapp / Web3 / Learning Blockchain / Learning Typescript
+          Web2+1 / Learning Blockchain / ❤️ Typescript
         </div>
       </div>
       <Spacer y={1} />

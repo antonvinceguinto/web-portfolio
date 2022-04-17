@@ -42,14 +42,14 @@ export const Navbar: React.FC = () => {
         </Modal.Footer>
       </Modal>
       <div className='flex min-w-full relative'>
-        <nav className='flex items-center justify-between uppercase font-bold'>
+        <nav className='flex items-center justify-between font-bold'>
           <div className='flex items-center justify-start'>
             <Avatar src='/images/me-pixel.png' size='lg' />
             <div className='items-center justify-center'>
               <div className='text-2xl opacity-0 md:opacity-100 md:ml-8'>
                 Anton Guinto
               </div>
-              <div className='text-sm lowercase font-normal text-gray-500 opacity-0 md:opacity-100 md:ml-8'>
+              <div className='text-sm lowercase text-gray-500 opacity-0 md:opacity-100 md:ml-8'>
                 antonvinceguinto@gmail.com
               </div>
             </div>

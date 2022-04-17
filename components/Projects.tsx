@@ -59,81 +59,79 @@ export const Projects: React.FC = () => {
   };
 
   return (
-    <>
-      <div className='flex-col flex md:min-h-[30vh] items-start justify-center pb-5'>
-        <div className='text-[1.6rem] lg:text-[3rem] font-bold'>
-          Real World Projects
-        </div>
-        <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-8'>
-          {projectItem({
-            framework: 'React',
-            title: 'Mutya NFT (Minting website)',
-            date: '2022-present / Personal',
-            description:
-              'A web3 project that mints erc721 tokens(a.k.a NFTs). Collect filipino inspired NFTs living inside Polygon Matic chain.',
-            url: 'https://mutya.vercel.app/',
-            techStack: ['reactjs', 'nextjs', 'solidity', 'tailwind'],
-          })}
-          {projectItem({
-            framework: 'Flutter',
-            title: 'SLP Tracker',
-            date: '2021 / Personal',
-            description:
-              'A flutter app that tracks SLP from a wallet. This was made for an NFT game Axie Infinity and is made using flutter',
-            url: 'https://play.google.com/store/apps/details?id=com.gdgapps.axiescholartracker',
-            techStack: ['flutter', 'android', 'ios'],
-          })}
-          {projectItem({
-            framework: 'Flutter',
-            title: 'NAIIBA (Nutriasia Inc.)',
-            date: '2020 / ThinkBIT Solutions Inc.',
-            description:
-              'A social app for Nutriasia employees to share their ideas in the company.',
-            url: 'https://play.google.com/store/apps/details?id=com.nutriasia.naiiba',
-            techStack: ['flutter', 'android', 'ios'],
-          })}
-          {projectItem({
-            framework: 'Flutter',
-            title: 'ProtectNow',
-            date: '2020 / ThinkBIT Solutions Inc.',
-            description:
-              'An insurance app for Cebuana Lhuillier. Get insured thru using the app.',
-            url: 'https://play.google.com/store/apps/details?id=com.ncvi.protectnow&hl=en_US&gl=US',
-            techStack: ['flutter', 'android', 'ios'],
-          })}
-          {projectItem({
-            framework: 'Flutter',
-            title: 'Barpoints',
-            date: '2020 / ThinkBIT Solutions Inc.',
-            description:
-              "BarPoints is the new way to explore your city's nightlife and get rewarded for it!",
-            url: 'https://play.google.com/store/apps/details?id=app.barcast.BarPoints&hl=en_US&gl=US',
-            techStack: ['flutter', 'android', 'ios'],
-          })}
-        </div>
-        <Spacer y={5} />
-        <div className='text-[1.6rem] lg:text-[3rem] font-bold'>
-          Some of my opensource Github projects
-        </div>
-        <div className='sm:grid md:grid-cols-2 w-full gap-9 justify-around items-center mt-8'>
-          {projectItem({
-            framework: 'React',
-            title: 'NextJS Project Template',
-            date: '2022',
-            description: 'A template for starting out a fresh nextjs project.',
-            url: 'https://github.com/antonvinceguinto/project-nextjs-template',
-            techStack: ['nextjs', 'husky', 'tailwind', 'ESLint'],
-          })}
-          {projectItem({
-            framework: 'React',
-            title: 'My Portfolio Website',
-            date: '2022',
-            description: 'Checkout the source code of this website.',
-            url: 'https://github.com/antonvinceguinto/web-portfolio',
-            techStack: ['reactjs', 'portfolio', 'bread'],
-          })}
-        </div>
+    <div className='flex-col flex md:min-h-[30vh] items-start justify-center pb-5'>
+      <div className='text-[1.6rem] lg:text-[3rem] font-bold mt-5 md:mt-12'>
+        Real World Projects
       </div>
-    </>
+      <div className='sm:grid md:grid-cols-2 lg:grid-cols-3 gap-9 justify-around items-center mt-2 md:mt-8'>
+        {projectItem({
+          framework: 'React',
+          title: 'Mutya NFT (Minting website)',
+          date: '2022-present / Personal',
+          description:
+            'A web3 project that mints erc721 tokens(a.k.a NFTs). Collect filipino inspired NFTs living inside Polygon Matic chain.',
+          url: 'https://mutya.vercel.app/',
+          techStack: ['reactjs', 'nextjs', 'solidity', 'tailwind'],
+        })}
+        {projectItem({
+          framework: 'Flutter',
+          title: 'SLP Tracker',
+          date: '2021 / Personal',
+          description:
+            'A flutter app that tracks SLP from a wallet. This was made for an NFT game Axie Infinity and is made using flutter',
+          url: 'https://play.google.com/store/apps/details?id=com.gdgapps.axiescholartracker',
+          techStack: ['flutter', 'android', 'ios'],
+        })}
+        {projectItem({
+          framework: 'Flutter',
+          title: 'NAIIBA (Nutriasia Inc.)',
+          date: '2020 / ThinkBIT Solutions Inc.',
+          description:
+            'A social app for Nutriasia employees to share their ideas in the company.',
+          url: 'https://play.google.com/store/apps/details?id=com.nutriasia.naiiba',
+          techStack: ['flutter', 'android', 'ios'],
+        })}
+        {projectItem({
+          framework: 'Flutter',
+          title: 'ProtectNow',
+          date: '2020 / ThinkBIT Solutions Inc.',
+          description:
+            'An insurance app for Cebuana Lhuillier. Get insured thru using the app.',
+          url: 'https://play.google.com/store/apps/details?id=com.ncvi.protectnow&hl=en_US&gl=US',
+          techStack: ['flutter', 'android', 'ios'],
+        })}
+        {projectItem({
+          framework: 'Flutter',
+          title: 'Barpoints',
+          date: '2020 / ThinkBIT Solutions Inc.',
+          description:
+            "BarPoints is the new way to explore your city's nightlife and get rewarded for it!",
+          url: 'https://play.google.com/store/apps/details?id=app.barcast.BarPoints&hl=en_US&gl=US',
+          techStack: ['flutter', 'android', 'ios'],
+        })}
+      </div>
+      <div className='text-[1.6rem] lg:text-[3rem] font-bold mt-5 md:mt-32'>
+        Some of my opensource Github projects
+      </div>
+      <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-2 md:mt-8'>
+        {projectItem({
+          framework: 'React',
+          title: 'NextJS Project Template',
+          date: '2022',
+          description:
+            'A template for starting out a fresh nextjs project. Also checks for errors in linting before committing to a repository',
+          url: 'https://github.com/antonvinceguinto/project-nextjs-template',
+          techStack: ['nextjs', 'husky', 'tailwind', 'ESLint'],
+        })}
+        {projectItem({
+          framework: 'React',
+          title: 'My Portfolio Website',
+          date: '2022',
+          description: 'Checkout the source code of this website.',
+          url: 'https://github.com/antonvinceguinto/web-portfolio',
+          techStack: ['reactjs', 'portfolio', 'bread'],
+        })}
+      </div>
+    </div>
   );
 };
