@@ -12,11 +12,11 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Anton Guinto</title>
-        <meta name='anton-guinto' content={`Anton's Portfolio`} />
+        <meta name='Anton Guinto Portfolio' content={`Anton Guinto's Portfolio. I build web app with react and mobile apps with Flutter.`} />
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main className='md:pt-16 text-white min-h-screen bg-gray-900 bg-black '>
+      <main className='md:pt-16 text-white min-h-screen bg-[#121212] '>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

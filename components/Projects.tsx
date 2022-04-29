@@ -12,49 +12,47 @@ export const Projects: React.FC = () => {
     techStack = [''],
   }) => {
     return (
-      <div className='mt-6 md:mt-0'>
-        <Card
-          bordered
-          shadow={false}
-          hoverable
-          css={{ backgroundColor: '#1F2937', border: 'none' }}
-        >
-          <div className='flex-col p-2 text-white'>
-            <div className='font-bold text-2xl'>
-              <div className='flex justify-between'>
-                {title}
-                <div className='text-green-300 flex items-center'>
-                  <div className='text-sm uppercase'>{framework}</div>
-                  <Spacer x={0.2} />
-                  {framework === 'React' ? (
-                    <RiReactjsFill size={16} />
-                  ) : framework === 'Flutter' ? (
-                    <RiFlutterFill size={16} />
-                  ) : (
-                    <RiGithubFill />
-                  )}
-                </div>
+      <Card
+        bordered
+        shadow={false}
+        hoverable
+        css={{ backgroundColor: '#1F2937', border: 'none', marginTop: '1rem'}}
+      >
+        <div className='flex-col p-2 text-white'>
+          <div className='font-bold text-2xl'>
+            <div className='flex justify-between'>
+              {title}
+              <div className='text-green-300 flex items-center'>
+                <div className='text-sm uppercase'>{framework}</div>
+                <Spacer x={0.2} />
+                {framework === 'React' ? (
+                  <RiReactjsFill size={16} />
+                ) : framework === 'Flutter' ? (
+                  <RiFlutterFill size={16} />
+                ) : (
+                  <RiGithubFill />
+                )}
               </div>
-              <div className='text-gray-400 text-sm font-normal'>{date}</div>
             </div>
-            <Spacer y={0.6} />
-            <div className='text-gray-400'>{description}</div>
-            <Spacer y={0.5} />
-            <div className='text-[#F8CA1C] text-sm flex justify-between'>
-              <a target='_blank' href={url} rel='noopener noreferrer'>
-                Visit Project↗
-              </a>
-              <div className='text-[#F8CA1C] flex gap-4 flex-wrap justify-end'>
-                {techStack.map((tech) => (
-                  <div key={tech} className='p-1 px-2 rounded bg-[#151c25]'>
-                    #{tech}
-                  </div>
-                ))}
-              </div>
+            <div className='text-gray-400 text-sm font-normal'>{date}</div>
+          </div>
+          <Spacer y={0.6} />
+          <div className='text-gray-400'>{description}</div>
+          <Spacer y={0.5} />
+          <div className='text-[#F8CA1C] text-sm flex justify-between'>
+            <a target='_blank' href={url} rel='noopener noreferrer'>
+              Visit Project↗
+            </a>
+            <div className='text-[#F8CA1C] flex gap-4 flex-wrap justify-end'>
+              {techStack.map((tech) => (
+                <div key={tech} className='p-1 px-2 rounded bg-[#151c25]'>
+                  #{tech}
+                </div>
+              ))}
             </div>
           </div>
-        </Card>
-      </div>
+        </div>
+      </Card>
     );
   };
 
