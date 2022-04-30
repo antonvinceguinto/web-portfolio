@@ -16,7 +16,7 @@ export const Projects: React.FC = () => {
         bordered
         shadow={false}
         hoverable
-        css={{ backgroundColor: '#1F2937', border: 'none', marginTop: '1rem'}}
+        css={{ backgroundColor: '#1F2937', border: 'none', marginTop: '1rem' }}
       >
         <div className='flex-col p-2 text-white'>
           <div className='font-bold text-2xl'>
@@ -59,9 +59,9 @@ export const Projects: React.FC = () => {
   return (
     <div className='flex-col flex md:min-h-[30vh] items-start justify-center pb-5'>
       <div className='text-[1.6rem] lg:text-[3rem] font-bold mt-5 md:mt-12'>
-        Real World Projects
+        Personal Projects
       </div>
-      <div className='sm:grid md:grid-cols-2 lg:grid-cols-3 gap-9 justify-around items-center mt-2 md:mt-8'>
+      <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-2 md:mt-8'>
         {projectItem({
           framework: 'React',
           title: 'Mutya NFT (Minting website)',
@@ -80,6 +80,11 @@ export const Projects: React.FC = () => {
           url: 'https://play.google.com/store/apps/details?id=com.gdgapps.axiescholartracker',
           techStack: ['flutter', 'android', 'ios'],
         })}
+      </div>
+      <div className='text-[1.6rem] lg:text-[3rem] font-bold mt-5 md:mt-32'>
+        Previous Work Projects
+      </div>
+      <div className='sm:grid md:grid-cols-2 lg:grid-cols-3 gap-9 justify-around items-center mt-2 md:mt-8'>
         {projectItem({
           framework: 'Flutter',
           title: 'NAIIBA (Nutriasia Inc.)',
