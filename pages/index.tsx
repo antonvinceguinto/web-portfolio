@@ -12,7 +12,31 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Anton Guinto</title>
-        <meta name='Anton Guinto Portfolio' content={`Anton Guinto's Portfolio. I build web app with react and mobile apps with Flutter.`} />
+        <meta name='Anton Guinto Portfolio' content={`Anton Guinto's Portfolio. I build web apps with react & nextjs and mobile apps with Flutter.`} />
+        <meta name='title' content='Anton Guinto Portfolio' />
+        <meta name='author' content='Anton Guinto' />
+        <meta
+          name='description'
+          content={`Anton Guinto's Portfolio. I build web apps with react & nextjs and mobile apps with Flutter.`}
+        />
+
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='http://antonguinto.com' />
+        <meta property='og:title' content='Anton Guinto Portfolio' />
+        <meta
+          property='og:description'
+          content={`Anton Guinto's Portfolio. I build web apps with react & nextjs and mobile apps with Flutter.`}
+        />
+        <meta property='og:image' content='https://i.ibb.co/gr25BtL/antonguinto.png' />
+
+        <meta property='twitter:card' content='summary_large_image' />
+        <meta property='twitter:url' content='http://antonguinto.com' />
+        <meta property='twitter:title' content='Anton Guinto Portfolio' />
+        <meta
+          property='twitter:description'
+          content={`Anton Guinto's Portfolio. I build web apps with react & nextjs and mobile apps with Flutter.`}
+        />
+        <meta property='twitter:image' content='https://i.ibb.co/gr25BtL/antonguinto.png' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
