@@ -6,6 +6,7 @@ import { Projects } from '../components/Projects';
 import { Spacer } from '@nextui-org/react';
 import Skills from '../components/Skills';
 import type { NextPage } from 'next';
+import Footer from '../components/Footer';
 
 const Home: NextPage = () => {
   return (
@@ -48,8 +49,7 @@ const Home: NextPage = () => {
         />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-
-      <main className='md:pt-16 text-white min-h-screen bg-[#121212] '>
+      <main className='md:pt-16 text-white min-h-screen bg-[#121212]'>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -71,12 +71,8 @@ const Home: NextPage = () => {
             <section>
               <Projects />
             </section>
-            <Spacer y={4} />
-            <footer className='text-center text-gray-400'>
-              Anton Vince Guinto © 2022
-            </footer>
-            <Spacer y={2} />
           </div>
+          <Footer />
         </motion.div>
       </main>
     </>
