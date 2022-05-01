@@ -9,11 +9,11 @@ export const Introduction: React.FC = () => {
   return (
     <div className='flex flex-col md:flex-row justify-center md:justify-between items-center min-h-[90vh] md:min-h-[60vh]'>
       <div className='items-start lg:text-left flex-col'>
-        <div className='gap-2 md:gap-8 text-4xl md:text-5xl font-extrabold flex-1 flex-col flex text-center md:text-left md:items-start'>
-          <div className='text-[#FF4A57] text-lg md:text-xl font-extrabold'>
-            WELCOME!
-          </div>
+        <div className='gap-2 md:gap-5 text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-sans font-black flex-1 flex-col flex text-center md:text-left md:items-start'>
           <div>
+            <div className='text-[#FF4A57] text-lg md:text-xl mb-2 font-inconsolata'>
+              WELCOME!
+            </div>
             {`I'm`} a <span className='text-gradient'>Front-end Engineer.</span>
           </div>
           <div>
@@ -25,7 +25,7 @@ export const Introduction: React.FC = () => {
         </div>
         <Spacer y={0.9} />
         <div className='text-gray-400 text-center md:text-left'>
-          Web2+1 / Learning Blockchain / ❤️ Typescript
+          Web2+1 / Learning Blockchain / ❤️&rsquo;s Typescript
         </div>
       </div>
       <div className='mt-14 md:ml-28'>
@@ -33,7 +33,7 @@ export const Introduction: React.FC = () => {
           <div className={cardStyles.floatingTwitter}>
             <BusinessCard
               username='@antonguinto'
-              description='I mostly post about web2+1 development. But mostly react & javascript.'
+              description='I tweet about web2+1 development. But mostly react & javascript.'
               url='https://twitter.com/antonguinto'
               footer='Twitter'
               icon={FaTwitter}
@@ -42,7 +42,7 @@ export const Introduction: React.FC = () => {
           <div className={cardStyles.floatingLinkedin}>
             <BusinessCard
               username='@guinto'
-              description='Let`s connect! We might build the next unicorn startup...'
+              description='Let`s connect! We might build the next unicorn startup 🦄'
               url='https://www.linkedin.com/in/guinto/'
               image='/images/linkedin-me.jpg'
               buttonLabel='Connect'
@@ -53,7 +53,7 @@ export const Introduction: React.FC = () => {
           <div className={`${cardStyles.floatingGithub} xl:col-span-2 lg:mt-2`}>
             <BusinessCard
               username='@antonvinceguinto'
-              description='Checkout on what I have been working on these days.'
+              description='Check out what projects I&rsquo;m working on👨‍💻. I also have some quite boring open source projects.'
               url='https://github.com/antonvinceguinto'
               image='/images/github-me.jpg'
               footer='Github'

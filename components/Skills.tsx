@@ -43,24 +43,43 @@ const Skills: React.FC = () => {
             className={s.skillText}
             style={{ opacity: opacityForBlock(progress, 0) }}
           >
-            I utilize the power of ReactJS to deliver blazing fast websites
-            to clients and to display beautiful & interactive user interfaces.
+            I utilize the power of{' '}
+            <span className='text-[#F8CA1C] underline'>
+              <a
+                target='_blank'
+                href='https://reactjs.org/'
+                rel='noopener noreferrer'
+              >
+                React JS
+              </a>
+            </span>{' '}
+            to deliver blazing fast websites to clients and to display beautiful
+            & interactive user interfaces.
           </div>
           <span
             className={`${s.skillText} inline-block after:content-['_']`}
             style={{ opacity: opacityForBlock(progress, 1) }}
           >
-            I recently built an NFT minting website and deployed it to Polygon
-            chain. I made use of NextJS, a framework on top of react to be able
-            to deliver the project fast enough to the market.
+            I recently built an NFT minting website and deployed it to{' '}
+            <span className='text-[#F8CA1C] underline'>
+              <a
+                target='_blank'
+                href='https://polygon.technology/'
+                rel='noopener noreferrer'
+              >
+                Polygon chain
+              </a>
+            </span>
+            . I made use of NextJS, a framework on top of react to be able to
+            deliver the project fast enough to the market.
           </span>
           <span
             className={`${s.skillText} inline-block`}
             style={{ opacity: opacityForBlock(progress, 2) }}
           >
-            I love using new technologies in building apps & web apps. I always
-            try to maintain clean and effecient code to minimize unusual bugs.
-            That`s why I use Typescript.
+            I love using new technologies in building mobile & web apps. I
+            always try to maintain clean and effecient code to minimize unusual
+            bugs.
           </span>
         </div>
       </div>

@@ -68,6 +68,9 @@ export const Navbar: React.FC = () => {
                 </div>
               </div>
             </div>
+            <Button color='gradient' auto onClick={handler}>
+              About Me
+            </Button>
             {/* <button
               className='py-2 px-3 flex items-center'
               onClick={() => setIsBurgerOpen(!isBurgerOpen)}

@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         karla: ['Karla', 'sans-serif'],
+        inconsolata: ['Inconsolata', 'monospace'],
       },
     },
   },

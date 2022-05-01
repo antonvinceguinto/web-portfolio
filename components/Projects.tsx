@@ -76,7 +76,7 @@ export const Projects: React.FC = () => {
           title: 'SLP Tracker',
           date: '2021 / Personal',
           description:
-            'A flutter app that tracks SLP from a wallet. This was made for an NFT game Axie Infinity and is made using flutter',
+            'A flutter app that tracks SLP from a wallet. This was made for an NFT game Axie Infinity and is made using flutter.',
           url: 'https://play.google.com/store/apps/details?id=com.gdgapps.axiescholartracker',
           techStack: ['flutter', 'android', 'ios'],
         })}
@@ -99,7 +99,7 @@ export const Projects: React.FC = () => {
           title: 'ProtectNow',
           date: '2020 / ThinkBIT Solutions Inc.',
           description:
-            'An insurance app for Cebuana Lhuillier. Get insured thru using the app.',
+            'An insurance app for Cebuana Lhuillier. Get insured today thru the app.',
           url: 'https://play.google.com/store/apps/details?id=com.ncvi.protectnow&hl=en_US&gl=US',
           techStack: ['flutter', 'android', 'ios'],
         })}
@@ -116,13 +116,13 @@ export const Projects: React.FC = () => {
       <div className='text-[1.6rem] lg:text-[3rem] font-bold mt-32'>
         Some of my opensource Github projects
       </div>
-      <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-2 md:mt-8'>
+      <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-2 md:mt-8 w-full'>
         {projectItem({
           framework: 'React',
           title: 'NextJS Project Template',
           date: '2022',
           description:
-            'A template for starting out a fresh nextjs project. Also checks for errors in linting before committing to a repository',
+            'A template that checks errors in linting before committing to a repository.',
           url: 'https://github.com/antonvinceguinto/project-nextjs-template',
           techStack: ['nextjs', 'husky', 'tailwind', 'ESLint'],
         })}

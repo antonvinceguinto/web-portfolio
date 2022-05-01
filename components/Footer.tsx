@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const styles = {
   footer:
-    'mt-8 md:mt-16 items-center justify-center bg-blue-900 bg-opacity-20 flex w-full m-auto',
+    'mt-10 md:mt-24 items-center justify-center bg-blue-900 bg-opacity-20 flex w-full m-auto',
   wrapper:
     'flex w-full max-w-[80vw] lg:max-w-[90vw] px-7 py-10 md:p-10 text-center items-center justify-center',
 };
