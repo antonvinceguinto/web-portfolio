@@ -8,16 +8,16 @@ import cardStyles from './business_card/business-card.module.css';
 export const Introduction: React.FC = () => {
   return (
     <div className='flex flex-col md:flex-row justify-center md:justify-between items-center min-h-[90vh] md:min-h-[60vh]'>
-      <div className='items-start lg:text-left flex-col md:mt-0'>
+      <div className='items-start lg:text-left flex-col'>
         <div className='gap-2 md:gap-8 text-4xl md:text-5xl font-extrabold flex-1 flex-col flex text-center md:text-left md:items-start'>
           <div className='text-[#FF4A57] text-lg md:text-xl font-extrabold'>
             WELCOME!
           </div>
           <div>
-            {`I'm`} a <span className='text-gradient'>Front End Engineer.</span>
+            {`I'm`} a <span className='text-gradient'>Front-end Engineer.</span>
           </div>
           <div>
-            I use <span className='text-gradient'>ReactJS.</span>
+            I use <span className='text-gradient'>React JS.</span>
           </div>
           <div>
             Learning <span className='text-gradient'>Solidity.</span>

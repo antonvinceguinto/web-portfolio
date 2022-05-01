@@ -49,7 +49,7 @@ const Home: NextPage = () => {
         />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className='md:pt-16 text-white min-h-screen bg-[#121212]'>
+      <main className='md:pt-16 text-white bg-[#121212] relative'>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
