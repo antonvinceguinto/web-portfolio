@@ -6,6 +6,7 @@ import { IconType } from 'react-icons';
 
 interface CardProps {
   username: string;
+  description: string;
   url: string;
   footer: string;
   image?: string;
@@ -15,6 +16,7 @@ interface CardProps {
 
 export const BusinessCard: React.FC<CardProps> = ({
   username = '@antonguinto',
+  description = 'Testing',
   url,
   footer = 'Visit me',
   image = '/images/memoji.jpg',
@@ -35,7 +37,7 @@ export const BusinessCard: React.FC<CardProps> = ({
       className='items-center text-center justify-center flex mt-1 rounded-xl cursor-pointer'
     >
       <div
-        className={`bg-white rounded-xl p-4 flex-col flex text-left text-white`}
+        className={`bg-white rounded-xl p-4 flex-col flex text-left w-[20rem]`}
       >
         <div className='flex'>
           <Avatar
@@ -45,30 +47,28 @@ export const BusinessCard: React.FC<CardProps> = ({
             bordered={false}
           />
           <Spacer x={0.9} />
-          <div className='flex flex-col items-start'>
-            <div className='font-bold text-gray-600'>Anton Guinto</div>
-            <div className='text-xs text-gray-400'>{username}</div>
-          </div>
-          <Spacer x={2} />
-          <div className='flex justify-center items-center'>
-            <a target='_blank' href={url} rel='noopener noreferrer'>
-              <Button rounded size='sm' auto>
-                <div
-                  className={`${
-                    buttonLabel === 'Connect' ? 'text-[0.7rem]' : 'text-xs'
-                  } px-2`}
-                >
-                  {buttonLabel}
-                </div>
-              </Button>
-            </a>
+          <div className='flex justify-between w-full'>
+            <div className='flex flex-col items-start'>
+              <div className='font-bold text-gray-600'>Anton</div>
+              <div className='text-xs text-gray-400'>{username}</div>
+            </div>
+            <div className='flex justify-center items-center'>
+              <a target='_blank' href={url} rel='noopener noreferrer'>
+                <Button rounded size='sm' auto>
+                  <div
+                    className={`${
+                      buttonLabel === 'Connect' ? 'text-[0.7rem]' : 'text-xs'
+                    } px-2`}
+                  >
+                    {buttonLabel}
+                  </div>
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
         <Spacer y={0.6} />
-        <div className='text-xs pl-2 text-gray-500'>
-          Web developer. Learning Web3 and Blockchain
-          <div>development.</div>
-        </div>
+        <div className='text-xs pl-2 text-gray-500'>{description}</div>
         <Spacer y={0.3} />
         {footer && (
           <div className='flex justify-between items-center'>

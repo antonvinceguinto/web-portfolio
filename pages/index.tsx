@@ -12,7 +12,10 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Anton Guinto</title>
-        <meta name='Anton Guinto Portfolio' content={`Anton Guinto's Portfolio. I build web apps with react & nextjs and mobile apps with Flutter.`} />
+        <meta
+          name='Anton Guinto Portfolio'
+          content={`Anton Guinto's Portfolio. I build web apps with react & nextjs and mobile apps with Flutter.`}
+        />
         <meta name='title' content='Anton Guinto Portfolio' />
         <meta name='author' content='Anton Guinto' />
         <meta
@@ -27,7 +30,10 @@ const Home: NextPage = () => {
           property='og:description'
           content={`Anton Guinto's Portfolio. I build web apps with react & nextjs and mobile apps with Flutter.`}
         />
-        <meta property='og:image' content='https://i.ibb.co/gr25BtL/antonguinto.png' />
+        <meta
+          property='og:image'
+          content='https://i.ibb.co/gr25BtL/antonguinto.png'
+        />
 
         <meta property='twitter:card' content='summary_large_image' />
         <meta property='twitter:url' content='http://antonguinto.com' />
@@ -36,7 +42,10 @@ const Home: NextPage = () => {
           property='twitter:description'
           content={`Anton Guinto's Portfolio. I build web apps with react & nextjs and mobile apps with Flutter.`}
         />
-        <meta property='twitter:image' content='https://i.ibb.co/gr25BtL/antonguinto.png' />
+        <meta
+          property='twitter:image'
+          content='https://i.ibb.co/gr25BtL/antonguinto.png'
+        />
         <link rel='icon' href='/favicon.ico' />
       </Head>
 

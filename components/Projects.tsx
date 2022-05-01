@@ -81,7 +81,7 @@ export const Projects: React.FC = () => {
           techStack: ['flutter', 'android', 'ios'],
         })}
       </div>
-      <div className='text-[1.6rem] lg:text-[3rem] font-bold mt-5 md:mt-32'>
+      <div className='text-[1.6rem] lg:text-[3rem] font-bold mt-32'>
         Previous Work Projects
       </div>
       <div className='sm:grid md:grid-cols-2 lg:grid-cols-3 gap-9 justify-around items-center mt-2 md:mt-8'>
@@ -113,7 +113,7 @@ export const Projects: React.FC = () => {
           techStack: ['flutter', 'android', 'ios'],
         })}
       </div>
-      <div className='text-[1.6rem] lg:text-[3rem] font-bold mt-5 md:mt-32'>
+      <div className='text-[1.6rem] lg:text-[3rem] font-bold mt-32'>
         Some of my opensource Github projects
       </div>
       <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-2 md:mt-8'>
