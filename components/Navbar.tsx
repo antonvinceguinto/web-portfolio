@@ -63,13 +63,13 @@ export const Navbar: React.FC = () => {
                 <div className='text-xl md:text-2xl ml-4 md:ml-8'>
                   Anton Guinto
                 </div>
-                <div className='text-xs md:text-md lowercase text-gray-500 ml-4 md:ml-8'>
+                <div className='hidden md:block text-xs md:text-md lowercase text-gray-500 ml-4 md:ml-8'>
                   antonvinceguinto@gmail.com
                 </div>
               </div>
             </div>
             <Button color='gradient' auto onClick={handler}>
-              About Me
+              <h5 className=''>About Me</h5>
             </Button>
             {/* <button
               className='py-2 px-3 flex items-center'

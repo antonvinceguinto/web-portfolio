@@ -29,7 +29,7 @@ export const Introduction: React.FC = () => {
         </div>
       </div>
       <div className='mt-14 md:ml-28'>
-        <div className='sm:grid xl:grid-cols-2 lg:grid gap-3'>
+        <div className='grid lg:grid xl:grid-cols-2 gap-3'>
           <div className={cardStyles.floatingTwitter}>
             <BusinessCard
               username='@antonguinto'
@@ -42,7 +42,7 @@ export const Introduction: React.FC = () => {
           <div className={cardStyles.floatingLinkedin}>
             <BusinessCard
               username='@guinto'
-              description='Let`s connect! We might build the next unicorn startup 🦄'
+              description='Let`s connect! We might build the next unicorn startup🦄.'
               url='https://www.linkedin.com/in/guinto/'
               image='/images/linkedin-me.jpg'
               buttonLabel='Connect'
@@ -53,7 +53,7 @@ export const Introduction: React.FC = () => {
           <div className={`${cardStyles.floatingGithub} xl:col-span-2 lg:mt-2`}>
             <BusinessCard
               username='@antonvinceguinto'
-              description='Check out what projects I&rsquo;m working on👨‍💻. I also have some quite boring open source projects.'
+              description='Check out what projects I&rsquo;m working on 👨‍💻. I also have some quite boring open source projects.'
               url='https://github.com/antonvinceguinto'
               image='/images/github-me.jpg'
               footer='Github'

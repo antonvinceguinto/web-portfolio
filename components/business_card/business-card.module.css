@@ -6,20 +6,20 @@
     animation-timing-function: ease-in-out;
   }
 
-  .floatingGithub {
-    animation-name: floating;
-    animation-duration: 4.5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    padding-top: 2rem;
-  }
-
   .floatingLinkedin {
     animation-name: floating;
     animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    padding-left: 1rem;
+    padding-left: 0;
+  }
+
+  .floatingGithub {
+    animation-name: floating;
+    animation-duration: 4.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    padding-top: 1rem;
   }
 
   @keyframes floating {
