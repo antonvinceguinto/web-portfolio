@@ -8,3 +8,5 @@ Run the development server:
 ```bash
 npm run dev
 ```
+
+Feel free to comment any mistake :)
