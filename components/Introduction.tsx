@@ -25,7 +25,7 @@ export const Introduction: React.FC = () => {
         </div>
         <Spacer y={0.9} />
         <div className='text-gray-400 text-center md:text-left'>
-          Web2+1 / Learning Blockchain / ❤️&rsquo;s Typescript
+          Web2+1 / Learning Blockchain / ❤️&rsquo;s Typescript / Flutter
         </div>
       </div>
       <div className='mt-14 md:ml-28'>
