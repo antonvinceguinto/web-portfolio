@@ -1,11 +1,9 @@
 import React from 'react';
 import { Spacer } from '@nextui-org/react';
-import { BusinessCard } from './business_card/BusinessCard';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { BounceAnimation } from './BounceAnimation';
 import cardStyles from './business_card/business-card.module.css';
+import BusinessCard from './business_card/BusinessCard';
 
-export const Introduction: React.FC = () => {
+export default function Introduction() {
   return (
     <div className='flex flex-col md:flex-row justify-center md:justify-between items-center min-h-[90vh] md:min-h-[60vh]'>
       <div className='items-start lg:text-left flex-col'>
@@ -36,7 +34,6 @@ export const Introduction: React.FC = () => {
               description='I tweet about web2+1 development. But mostly react & javascript.'
               url='https://twitter.com/antonguinto'
               footer='Twitter'
-              icon={FaTwitter}
             />
           </div>
           <div className={cardStyles.floatingLinkedin}>
@@ -47,7 +44,6 @@ export const Introduction: React.FC = () => {
               image='/images/linkedin-me.jpg'
               buttonLabel='Connect'
               footer='Linkedin'
-              icon={FaLinkedin}
             />
           </div>
           <div className={`${cardStyles.floatingGithub} xl:col-span-2 lg:mt-2`}>
@@ -57,11 +53,10 @@ export const Introduction: React.FC = () => {
               url='https://github.com/antonvinceguinto'
               image='/images/github-me.jpg'
               footer='Github'
-              icon={FaGithub}
             />
           </div>
         </div>
       </div>
     </div>
   );
-};
+}

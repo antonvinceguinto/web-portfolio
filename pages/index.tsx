@@ -1,14 +1,13 @@
 import Head from 'next/head';
-import { Navbar } from '../components/Navbar';
-import { Introduction } from '../components/Introduction';
-import { motion } from 'framer-motion';
-import { Projects } from '../components/Projects';
 import { Spacer } from '@nextui-org/react';
+import { motion } from 'framer-motion';
+import Navbar from '../components/Navbar';
+import Introduction from '../components/Introduction';
+import Projects from '../components/Projects';
 import Skills from '../components/Skills';
-import type { NextPage } from 'next';
 import Footer from '../components/Footer';
 
-const Home: NextPage = () => {
+function Home() {
   return (
     <>
       <Head>
@@ -77,6 +76,6 @@ const Home: NextPage = () => {
       </main>
     </>
   );
-};
+}
 
 export default Home;

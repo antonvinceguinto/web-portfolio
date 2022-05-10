@@ -1,9 +1,7 @@
-import Image from 'next/image';
 import { Spacer, Avatar, Button } from '@nextui-org/react';
 import { motion } from 'framer-motion';
-import { JsxElement } from 'typescript';
-import { IconType } from 'react-icons';
 
+/* eslint-disable react/require-default-props */
 interface CardProps {
   username: string;
   description: string;
@@ -11,18 +9,16 @@ interface CardProps {
   footer: string;
   image?: string;
   buttonLabel?: string;
-  icon: IconType;
 }
 
-export const BusinessCard: React.FC<CardProps> = ({
+export default function BusinessCard({
   username = '@antonguinto',
   description = 'Testing',
-  url,
+  url = '',
   footer = '',
   image = '/images/memoji.jpg',
   buttonLabel = 'Follow',
-  icon,
-}) => {
+}: CardProps) {
   return (
     <motion.div
       whileHover={{
@@ -36,9 +32,7 @@ export const BusinessCard: React.FC<CardProps> = ({
       }}
     >
       <div className='items-center text-center justify-center flex mt-1 rounded-xl'>
-        <div
-          className={`bg-white rounded-xl p-4 flex-col flex text-left w-full lg:w-[20rem]`}
-        >
+        <div className='bg-white rounded-xl p-4 flex-col flex text-left w-full lg:w-[20rem]'>
           <div className='flex'>
             <Avatar
               src={image}
@@ -55,13 +49,7 @@ export const BusinessCard: React.FC<CardProps> = ({
               <div className='flex justify-center items-center'>
                 <a target='_blank' href={url} rel='noopener noreferrer'>
                   <Button rounded size='sm' auto>
-                    <div
-                      className={`${
-                        buttonLabel === 'Connect' ? 'text-[0.7rem]' : 'text-xs'
-                      } px-2`}
-                    >
-                      {buttonLabel}
-                    </div>
+                    {buttonLabel}
                   </Button>
                 </a>
               </div>
@@ -75,11 +63,10 @@ export const BusinessCard: React.FC<CardProps> = ({
               <div className='text-xs font-black pl-2 text-gray-600'>
                 {footer}
               </div>
-              {icon}
             </div>
           )}
         </div>
       </div>
     </motion.div>
   );
-};
+}

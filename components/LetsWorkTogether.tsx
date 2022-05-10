@@ -1,16 +1,13 @@
-import { useEffect } from 'react';
-import { BounceAnimation } from './BounceAnimation';
+import BounceAnimation from './BounceAnimation';
 
-export const LetsWorkTogether: React.FC = () => {
-  const item = (label: string, value: string) => {
-    return (
-      <div className='flex flex-col'>
-        <div className='text-2xl font-bold'>{label}</div>
-        <div>{value}</div>
-      </div>
-    );
-  };
+const item = (label: string, value: string) => (
+  <div className='flex flex-col'>
+    <div className='text-2xl font-bold'>{label}</div>
+    <div>{value}</div>
+  </div>
+);
 
+export default function LetsWorkTogether() {
   return (
     <BounceAnimation>
       <div className='flex flex-col min-h-[50vh] items-start justify-end pb-5'>
@@ -21,4 +18,4 @@ export const LetsWorkTogether: React.FC = () => {
       </div>
     </BounceAnimation>
   );
-};
+}

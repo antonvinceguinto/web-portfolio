@@ -1,27 +1,22 @@
 import React, { useState } from 'react';
 import { Avatar, Button, Modal, Text } from '@nextui-org/react';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { AiOutlineClose } from 'react-icons/ai';
-import { NavigationContext } from '../contexts/navigation-context';
-import { TiThMenu } from 'react-icons/ti';
-import { VscChromeClose } from 'react-icons/vsc';
 
-function NavItem({ label }: { label: string }) {
-  return (
-    <div className='p-4 cursor-pointer bg-gray-600 bg-opacity-30 text-center'>
-      {label}
-    </div>
-  );
-}
+// function NavItem({ label }: { label: string }) {
+//   return (
+//     <div className='p-4 cursor-pointer bg-gray-600 bg-opacity-30 text-center'>
+//       {label}
+//     </div>
+//   );
+// }
 
-export const Navbar: React.FC = () => {
+export default function Navbar() {
   const [visible, setVisible] = useState<boolean>(false);
   const handler = () => setVisible(true);
   const closeHandler = () => {
     setVisible(false);
   };
 
-  const { isBurgerOpen, setIsBurgerOpen } = React.useContext(NavigationContext);
+  //   const { isBurgerOpen, setIsBurgerOpen } = React.useContext(NavigationContext);
 
   return (
     <>
@@ -83,18 +78,18 @@ export const Navbar: React.FC = () => {
             </button> */}
           </div>
           {/* <nav
-            className={`${
-              isBurgerOpen ? 'visible' : 'hidden'
-            } w-full mt-5 transition-all duration-150`}
-          >
-            <ul className='flex flex-col gap-1'>
-              <NavItem label='Home' />
-              <NavItem label='About' />
-              <NavItem label='Projects' />
-            </ul>
-          </nav> */}
+              className={`${
+                isBurgerOpen ? 'visible' : 'hidden'
+              } w-full mt-5 transition-all duration-150`}
+            >
+              <ul className='flex flex-col gap-1'>
+                <NavItem label='Home' />
+                <NavItem label='About' />
+                <NavItem label='Projects' />
+              </ul>
+            </nav> */}
         </div>
       </div>
     </>
   );
-};
+}

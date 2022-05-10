@@ -1,31 +1,40 @@
 {
 	"compilerOptions": {
-		"target": "es2016", /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
-		"module": "commonjs", /* Specify what module code is generated. */
-		"esModuleInterop": true, /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */
-		"forceConsistentCasingInFileNames": true, /* Ensure that casing is correct in imports. */
-		"strict": true, /* Enable all strict type-checking options. */
-		"skipLibCheck": true, /* Skip type checking all .d.ts files. */
+		"allowJs": true,
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"declaration": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
 		"jsx": "preserve",
 		"lib": [
 			"dom",
 			"dom.iterable",
 			"esnext"
 		],
-		"allowJs": true,
-		"noEmit": true,
-		"incremental": true,
+		"module": "esnext",
 		"moduleResolution": "node",
+		"noEmit": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitReturns": true,
+		"pretty": true,
 		"resolveJsonModule": true,
-		"isolatedModules": true
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"incremental": true,
+		"strict": true,
+		"target": "es2018",
+		// "module": "commonjs",
+		"outDir": "dist"
 	},
 	"include": [
 		"next-env.d.ts",
 		"**/*.ts",
 		"**/*.tsx",
-		"components/Untitled-1.js",
-		// "pages/_app.tsx",
-		// "pages/index.js"
+		"./scripts",
+		"./test",
+		"hardhat.config.ts"
 	],
 	"exclude": [
 		"node_modules"

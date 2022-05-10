@@ -1,61 +1,59 @@
-import { BounceAnimation } from './BounceAnimation';
 import { RiFlutterFill, RiReactjsFill, RiGithubFill } from 'react-icons/ri';
 import { Card, Spacer } from '@nextui-org/react';
 
-export const Projects: React.FC = () => {
-  const projectItem = ({
-    framework = '',
-    title = '',
-    date = '',
-    description = '',
-    url = '',
-    techStack = [''],
-  }) => {
-    return (
-      <Card
-        bordered
-        shadow={false}
-        hoverable
-        css={{ backgroundColor: '#1F2937', border: 'none', marginTop: '1rem' }}
-      >
-        <div className='flex-col p-2 text-white'>
-          <div className='font-bold text-2xl'>
-            <div className='flex justify-between'>
-              {title}
-              <div className='text-green-300 flex items-center'>
-                <div className='text-sm uppercase'>{framework}</div>
-                <Spacer x={0.2} />
-                {framework === 'React' ? (
-                  <RiReactjsFill size={16} />
-                ) : framework === 'Flutter' ? (
-                  <RiFlutterFill size={16} />
-                ) : (
-                  <RiGithubFill />
-                )}
-              </div>
-            </div>
-            <div className='text-gray-400 text-sm font-normal'>{date}</div>
-          </div>
-          <Spacer y={0.6} />
-          <div className='text-gray-400'>{description}</div>
-          <Spacer y={0.5} />
-          <div className='text-[#F8CA1C] text-sm flex justify-between'>
-            <a target='_blank' href={url} rel='noopener noreferrer'>
-              Visit Project↗
-            </a>
-            <div className='text-[#F8CA1C] flex gap-4 flex-wrap justify-end'>
-              {techStack.map((tech) => (
-                <div key={tech} className='p-1 px-2 rounded bg-[#151c25]'>
-                  #{tech}
-                </div>
-              ))}
-            </div>
+const projectItem = ({
+  framework = '',
+  title = '',
+  date = '',
+  description = '',
+  url = '',
+  techStack = [''],
+}) => (
+  <Card
+    bordered
+    shadow={false}
+    hoverable
+    css={{ backgroundColor: '#1F2937', border: 'none', marginTop: '1rem' }}
+  >
+    <div className='flex-col p-2 text-white'>
+      <div className='font-bold text-2xl'>
+        <div className='flex justify-between'>
+          {title}
+          <div className='text-green-300 flex items-center'>
+            <div className='text-sm uppercase'>{framework}</div>
+            <Spacer x={0.2} />
+            {/* eslint-disable-next-line no-nested-ternary */}
+            {framework === 'React' ? (
+              <RiReactjsFill size={16} />
+            ) : framework === 'Flutter' ? (
+              <RiFlutterFill size={16} />
+            ) : (
+              <RiGithubFill />
+            )}
           </div>
         </div>
-      </Card>
-    );
-  };
+        <div className='text-gray-400 text-sm font-normal'>{date}</div>
+      </div>
+      <Spacer y={0.6} />
+      <div className='text-gray-400'>{description}</div>
+      <Spacer y={0.5} />
+      <div className='text-[#F8CA1C] text-sm flex justify-between'>
+        <a target='_blank' href={url} rel='noopener noreferrer'>
+          Visit Project↗
+        </a>
+        <div className='text-[#F8CA1C] flex gap-4 flex-wrap justify-end'>
+          {techStack.map((tech) => (
+            <div key={tech} className='p-1 px-2 rounded bg-[#151c25]'>
+              #{tech}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </Card>
+);
 
+export default function Projects() {
   return (
     <div className='flex-col flex md:min-h-[30vh] items-start justify-center pb-5'>
       <div className='text-[1.6rem] lg:text-[3rem] font-bold mt-5 md:mt-12'>
@@ -64,11 +62,11 @@ export const Projects: React.FC = () => {
       <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-2 md:mt-8'>
         {projectItem({
           framework: 'React',
-          title: 'Mutya NFT (Minting website)',
+          title: 'BMAC NFT (Minting website)',
           date: '2022-present / Personal',
           description:
             'A web3 project that mints erc721 tokens(a.k.a NFTs). Collect filipino inspired NFTs living inside Polygon Matic chain.',
-          url: 'https://mutya.vercel.app/',
+          url: 'https://BMAC.vercel.app/',
           techStack: ['reactjs', 'nextjs', 'solidity', 'tailwind'],
         })}
         {projectItem({
@@ -137,4 +135,4 @@ export const Projects: React.FC = () => {
       </div>
     </div>
   );
-};
+}

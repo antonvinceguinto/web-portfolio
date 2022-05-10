@@ -8,7 +8,7 @@ const opacityForBlock = (sectionProgress: number, blockNo: number) => {
   return 0.2;
 };
 
-const Skills: React.FC = () => {
+function Skills() {
   const { scrollY } = useContext(ScrollContext);
   const refContainer = useRef<HTMLDivElement>(null);
   const numOfPages = 3;
@@ -22,18 +22,10 @@ const Skills: React.FC = () => {
     const percentY =
       Math.min(
         clientHeight + halfH,
-        Math.max(-screenH, scrollY - offsetTop) + halfH,
+        Math.max(-screenH, scrollY - offsetTop) + halfH
       ) / clientHeight;
     progress = Math.min(numOfPages - 0.5, Math.max(0.5, percentY * numOfPages));
   }
-
-  const skill = (skill: string) => {
-    return (
-      <div className='p-5 bg-slate-50 text-[1.4rem] text-center text-black border-b-4 border-green-500 lg:mt-0 mt-3 hover:scale-110 transition-all duration-200'>
-        {skill}
-      </div>
-    );
-  };
 
   return (
     <div ref={refContainer} className='text-white'>
@@ -85,6 +77,6 @@ const Skills: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Skills;

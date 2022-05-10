@@ -1,20 +1,25 @@
-import { AnimationProps, motion } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 
-export const BounceAnimation: React.FC = ({ children }) => {
-  const cardVariants = {
-    offscreen: {
-      y: 150,
+const cardVariants = {
+  offscreen: {
+    y: 150,
+  },
+  onscreen: {
+    y: 0,
+    transition: {
+      type: 'spring',
+      bounce: 0.4,
+      duration: 0.8,
     },
-    onscreen: {
-      y: 0,
-      transition: {
-        type: 'spring',
-        bounce: 0.4,
-        duration: 0.8,
-      },
-    },
-  };
+  },
+};
 
+export default function BounceAnimation({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <motion.div
       initial='offscreen'
@@ -24,4 +29,4 @@ export const BounceAnimation: React.FC = ({ children }) => {
       <motion.div variants={cardVariants}>{children}</motion.div>
     </motion.div>
   );
-};
+}
