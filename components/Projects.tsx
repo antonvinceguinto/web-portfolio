@@ -62,11 +62,11 @@ export default function Projects() {
       <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-2 md:mt-8'>
         {projectItem({
           framework: 'React',
-          title: 'BMAC NFT (Minting website)',
+          title: 'Mutya NFT (Minting website)',
           date: '2022-present / Personal',
           description:
             'A web3 project that mints erc721 tokens(a.k.a NFTs). Collect filipino inspired NFTs living inside Polygon Matic chain.',
-          url: 'https://BMAC.vercel.app/',
+          url: 'https://mutya.vercel.app/',
           techStack: ['reactjs', 'nextjs', 'solidity', 'tailwind'],
         })}
         {projectItem({
@@ -83,6 +83,14 @@ export default function Projects() {
         Previous Work Projects
       </div>
       <div className='sm:grid md:grid-cols-2 lg:grid-cols-3 gap-9 justify-around items-center mt-2 md:mt-8'>
+        {projectItem({
+          framework: 'React',
+          title: 'Inside Out NFT',
+          date: '2022 / OUTR Studio',
+          description: 'A website that mints NFTs in the mainnet.',
+          url: 'https://insideoutnft.vercel.app/',
+          techStack: ['reactjs', 'nextjs', 'solidity', 'tailwind'],
+        })}
         {projectItem({
           framework: 'Flutter',
           title: 'NAIIBA (Nutriasia Inc.)',
