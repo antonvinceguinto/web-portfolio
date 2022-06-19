@@ -5,7 +5,7 @@ import { useAccount, useNetwork } from 'wagmi';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { Avatar } from '@nextui-org/react';
 import { useRouter } from 'next/router';
-import { getBMAC } from '../utils/contracts';
+import getBMAC from '../utils/contracts';
 
 const styles = {
   simpleInput:
