@@ -31,8 +31,8 @@ export function getSortedPostsData() {
   // Sort posts by date
   return allPostsData.sort(
     (
-      { date: a }: string,
-      { date: b }: string
+      { date: a }: any,
+      { date: b }: any
     ) => {
       if (a < b) {
         return 1;
