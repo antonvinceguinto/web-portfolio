@@ -32,8 +32,8 @@
 		"next-env.d.ts",
 		"**/*.ts",
 		"**/*.tsx",
-		"./scripts",
-		"./test",
+		"web3/scripts",
+		"web3/test",
 		"hardhat.config.ts"
 	],
 	"exclude": [

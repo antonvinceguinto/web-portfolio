@@ -1,7 +1,7 @@
+import React from 'react';
 import { Spacer, Avatar, Button } from '@nextui-org/react';
 import { motion } from 'framer-motion';
 
-/* eslint-disable react/require-default-props */
 interface CardProps {
   username: string;
   description: string;

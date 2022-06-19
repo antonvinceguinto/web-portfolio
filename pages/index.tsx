@@ -59,9 +59,7 @@ function Home() {
             <div className='flex justify-center items-center'>
               <Navbar />
             </div>
-            <section className='pt-10'>
-              <Introduction />
-            </section>
+            <Introduction />
           </div>
           <Spacer y={4} />
           <Skills />
