@@ -26,14 +26,15 @@ export default function Introduction() {
         <div className='text-gray-400 text-center md:text-left'>
           Web2+1 / Learning Blockchain / ❤️&rsquo;s Typescript / Flutter
         </div>
+        <div className='cursor-pointer mt-10'>
+          <Link href='/blogs' passHref>
+            <h1 className='py-2 px-5 border border-green-100 bg-green-500 w-full rounded-lg text-center'>
+              I write Blogs (Under Improvement) 🏗️
+            </h1>
+          </Link>
+        </div>
       </div>
-      <div className='cursor-pointer mt-10'>
-        <Link href='/blogs' passHref>
-          <h1 className='py-2 px-5 border border-green-100 bg-green-500 w-full rounded-lg text-center'>
-            I write Blogs (Under Improvement) 🏗️
-          </h1>
-        </Link>
-      </div>
+
       <div className='mt-10 md:ml-28'>
         <div className='grid lg:grid xl:grid-cols-2 gap-3'>
           <div className={cardStyles.floatingTwitter}>
