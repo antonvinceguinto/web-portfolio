@@ -1,28 +1,42 @@
 import Head from 'next/head';
 import { getAllPostIds, getPostData } from '../../../lib/posts';
-import DateView from '../../../components/blog-components/date-view';
+import DateView from '../../../components/blog-components/DateView';
+import BlogLayout from '../../../components/blog-components/Layout';
 
 export default function Post({ postData }: any) {
+  const parsedHTMLContent = postData.contentHtml
+    .replace(/<[^>]+>/g, '')
+    .substring(0, 150);
+
   return (
     <div>
       <Head>
         <title>{postData.title}</title>
+        <meta name='Anton Guinto Blogs' content={postData.title} />
+        <meta name='keywords' content={postData.title} />
+        <meta name='title' content={postData.title} />
+        <meta name='author' content='Anton Guinto' />
+        <meta name='description' content={parsedHTMLContent} />
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='http://antonguinto.com/blogs' />
+        <meta property='og:title' content={postData.title} />
+        <meta property='og:description' content={parsedHTMLContent} />
       </Head>
-      <article>
-        <h1>{postData.title}</h1>
-        <div>
+      <BlogLayout>
+        <article className='flex flex-col gap-3 mt-10'>
           <DateView dateString={postData.date} />
-        </div>
-        <div
-          className='html-content'
-          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-        />
-      </article>
+          <h1 className='blog-title'>{postData.title}</h1>
+          <div
+            className='html-content'
+            dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+          />
+        </article>
+      </BlogLayout>
     </div>
   );
 }
 
-export async function getStaticPaths() {
+export function getStaticPaths() {
   const paths = getAllPostIds();
   return {
     paths,

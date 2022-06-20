@@ -27,7 +27,19 @@
     text-shadow: 0 0 80px rgb(192 219 255 / 75%), 0 0 32px rgb(65 120 255 / 24%);
   }
 
+  .html-content {
+    @apply text-lg md:text-xl;
+  }
+
   .html-content a {
-    color: #0000ff;
+    color: #3498db;
+  }
+
+  .blog-title {
+    @apply font-bold text-4xl;
+  }
+
+  .blog-container {
+    @apply md:max-w-3xl lg:max-w-4xl mx-auto font-karla;
   }
 }

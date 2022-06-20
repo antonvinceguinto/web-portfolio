@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { Spacer } from '@nextui-org/react';
-import cardStyles from './business_card/business-card.module.css';
-import BusinessCard from './business_card/BusinessCard';
+import cardStyles from './BusinessCard/business-card.module.css';
+import BusinessCard from './BusinessCard';
 
 export default function Introduction() {
   return (
@@ -27,9 +27,9 @@ export default function Introduction() {
           Web2+1 / Learning Blockchain / ❤️&rsquo;s Typescript / Flutter
         </div>
       </div>
-      <div className='cursor-pointer'>
+      <div className='cursor-pointer mt-10'>
         <Link href='/blogs' passHref>
-          <h1 className='mt-10 py-2 px-5 border border-green-100 bg-green-500 w-full rounded-lg text-center'>
+          <h1 className='py-2 px-5 border border-green-100 bg-green-500 w-full rounded-lg text-center'>
             I write Blogs (Under Improvement) 🏗️
           </h1>
         </Link>

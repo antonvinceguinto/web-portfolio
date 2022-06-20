@@ -1,14 +1,14 @@
 import React from 'react';
 import Head from 'next/head';
 import { getSortedPostsData } from '../../lib/posts';
-import BlogList from '../../components/blog-components/blog-list';
+import BlogList from '../../components/blog-components/BlogList';
 
 function Blogs({ allPostsData }: any) {
   return (
     <div>
       <Head>
         <title>Anton Guinto - Blogs</title>
-        <meta name='description' content='Blog website by Anton Guinto' />
+        <meta name='description' content='Blogs by Anton Guinto' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
@@ -20,7 +20,7 @@ function Blogs({ allPostsData }: any) {
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = await getSortedPostsData();
   return {
     props: {
       allPostsData,
