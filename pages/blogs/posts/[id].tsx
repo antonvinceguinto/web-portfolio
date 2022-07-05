@@ -23,11 +23,11 @@ export default function Post({ postData }: any) {
         <meta property='og:description' content={parsedHTMLContent} />
       </Head>
       <BlogLayout>
-        <article className='flex flex-col gap-3 mt-10'>
+        <article className='flex flex-col gap-2 mt-10'>
           <DateView dateString={postData.date} />
           <h1 className='blog-title'>{postData.title}</h1>
           <div
-            className='html-content'
+            className='unreset'
             dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
           />
         </article>
