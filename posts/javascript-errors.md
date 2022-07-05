@@ -1,6 +1,6 @@
 ---
 title: 'Javascript Main Errors'
-date: '2022-02-12'
+date: '2022-07-05'
 ---
 
 There are three main types of errors in JavaScript:
