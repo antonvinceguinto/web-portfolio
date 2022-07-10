@@ -71,7 +71,7 @@ export default function Projects() {
         })}
         {projectItem({
           framework: 'Flutter',
-          title: 'SLP Tracker',
+          title: 'SLP Tracker (10k+ Installs)',
           date: '2021 / Personal',
           description:
             'A flutter app that tracks SLP from a wallet. This was made for an NFT game Axie Infinity and is made using flutter.',
@@ -82,7 +82,7 @@ export default function Projects() {
       <div className='text-[1.6rem] lg:text-[3rem] font-bold mt-32'>
         Previous Work Projects
       </div>
-      <div className='sm:grid md:grid-cols-2 lg:grid-cols-3 gap-9 justify-around items-center mt-2 md:mt-8'>
+      <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-2 md:mt-8 w-full'>
         {projectItem({
           framework: 'React',
           title: 'Inside Out NFT',
@@ -123,6 +123,15 @@ export default function Projects() {
         Some of my opensource Github projects
       </div>
       <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-2 md:mt-8 w-full'>
+        {projectItem({
+          framework: 'Flutter',
+          title: 'Movie App',
+          date: '2022',
+          description:
+            'A flutter app that uses TMDB api with riverpod along with repository pattern.',
+          url: 'https://github.com/antonvinceguinto/flutter_tmdb',
+          techStack: ['flutter', 'riverpod', 'android', 'ios'],
+        })}
         {projectItem({
           framework: 'React',
           title: 'NextJS Project Template',

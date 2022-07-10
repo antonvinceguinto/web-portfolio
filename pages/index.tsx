@@ -53,7 +53,7 @@ function Home() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className='pt-7 flex justify-center items-center flex-col'
+          className='flex justify-center items-center flex-col'
         >
           <div className='max-w-[80vw] lg:max-w-[90vw]'>
             <div className='flex justify-center items-center'>

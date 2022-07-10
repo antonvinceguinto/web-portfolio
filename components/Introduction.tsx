@@ -6,7 +6,7 @@ import BusinessCard from './BusinessCard';
 
 export default function Introduction() {
   return (
-    <div className='flex flex-col md:flex-row justify-center md:justify-between items-center min-h-[90vh] md:min-h-[65vh] md:px-10 pt-10'>
+    <div className='flex flex-col md:flex-row justify-center md:justify-between items-center min-h-[90vh] md:min-h-[75vh] md:px-10 pt-10'>
       <div className='items-start lg:text-left flex-col'>
         <div className='gap-2 md:gap-5 text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-sans font-black flex-1 flex-col flex text-center md:text-left md:items-start'>
           <div>
@@ -16,7 +16,7 @@ export default function Introduction() {
             {`I'm`} a <span className='text-gradient'>Front-end Engineer.</span>
           </div>
           <div>
-            I use <span className='text-gradient'>React JS.</span>
+            I use <span className='text-gradient'>React JS & Flutter</span>
           </div>
           <div>
             Learning <span className='text-gradient'>Solidity.</span>
