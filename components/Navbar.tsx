@@ -49,7 +49,7 @@ export default function Navbar() {
           </Button>
         </Modal.Footer>
       </Modal>
-      <div className='flex min-w-full md:mt-0 md:px-10'>
+      <div className='flex w-full mt-10 md:mt-0 md:px-10'>
         <div className='flex flex-col w-full items-start justify-between md:justify-center font-bold'>
           <div className='flex w-full justify-between'>
             <div className='flex items-center'>
