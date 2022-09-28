@@ -85,6 +85,15 @@ export default function Projects() {
       <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-2 md:mt-8 w-full'>
         {projectItem({
           framework: 'React',
+          title: 'OUTR Studios Web3',
+          date: '2022 / OUTR Studio',
+          description:
+            'A website for a client to let its audience buy NFTs from the website.',
+          url: 'https://outrstudios.vercel.app/',
+          techStack: ['reactjs', 'nextjs', 'solidity', 'tailwind'],
+        })}
+        {projectItem({
+          framework: 'React',
           title: 'Inside Out NFT',
           date: '2022 / OUTR Studio',
           description: 'A website that mints NFTs in the mainnet.',

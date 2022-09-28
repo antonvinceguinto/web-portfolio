@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import Introduction from '../components/Introduction';
 import Projects from '../components/Projects';
-import Skills from '../components/Skills';
 import Footer from '../components/Footer';
 
 function Home() {
@@ -62,12 +61,10 @@ function Home() {
             <Introduction />
           </div>
           <Spacer y={4} />
-          <Skills />
-          <Spacer y={3} />
+          {/* <Skills /> */}
+          {/* <Spacer y={3} /> */}
           <div className='max-w-[80vw] lg:max-w-[90vw]'>
-            <section>
-              <Projects />
-            </section>
+            <Projects />
           </div>
           <Footer />
         </motion.div>
