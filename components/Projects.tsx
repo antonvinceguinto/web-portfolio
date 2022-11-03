@@ -1,4 +1,5 @@
 import { RiFlutterFill, RiReactjsFill, RiGithubFill } from 'react-icons/ri';
+import { TbBrandNextjs } from 'react-icons/tb';
 import { Card, Spacer } from '@nextui-org/react';
 
 const projectItem = ({
@@ -25,6 +26,9 @@ const projectItem = ({
             {/* eslint-disable-next-line no-nested-ternary */}
             {framework === 'React' ? (
               <RiReactjsFill size={16} />
+            ) : // eslint-disable-next-line no-nested-ternary
+            framework === 'NextJS' ? (
+              <TbBrandNextjs size={16} />
             ) : framework === 'Flutter' ? (
               <RiFlutterFill size={16} />
             ) : (
@@ -61,13 +65,31 @@ export default function Projects() {
       </div>
       <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-2 md:mt-8'>
         {projectItem({
-          framework: 'React',
+          framework: 'NextJS',
+          title: 'NFT Wallet',
+          date: '2022',
+          description:
+            'A NextJS Project which showcases the use of Alchemy API to fetch NFTs in different blockchains.',
+          url: 'https://nftwallet.vercel.app/',
+          techStack: ['nextjs', 'solidity', 'tailwind'],
+        })}
+        {projectItem({
+          framework: 'Flutter',
+          title: 'LTO Reviewer 2023',
+          date: '2022',
+          description:
+            "LTO Reviewr is the most up-to-date reviewer for the Land Transportation Office Examination. Our mission is to help future filipino drivers to pass the exam and make sure they get their driver's license.",
+          url: 'https://play.google.com/store/apps/details?id=com.tonbeans.lto_reviewer',
+          techStack: ['nextjs', 'solidity', 'tailwind'],
+        })}
+        {projectItem({
+          framework: 'NextJS',
           title: 'Mutya NFT (Minting website)',
-          date: '2022-present / Personal',
+          date: '2022',
           description:
             'A web3 project that mints erc721 tokens(a.k.a NFTs). Collect filipino inspired NFTs living inside Polygon Matic chain.',
           url: 'https://mutya.vercel.app/',
-          techStack: ['reactjs', 'nextjs', 'solidity', 'tailwind'],
+          techStack: ['nextjs', 'solidity', 'tailwind'],
         })}
         {projectItem({
           framework: 'Flutter',
@@ -84,7 +106,7 @@ export default function Projects() {
       </div>
       <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-2 md:mt-8 w-full'>
         {projectItem({
-          framework: 'React',
+          framework: 'NextJS',
           title: 'OUTR Studios Web3',
           date: '2022 / OUTR Studio',
           description:
@@ -93,7 +115,7 @@ export default function Projects() {
           techStack: ['reactjs', 'nextjs', 'solidity', 'tailwind'],
         })}
         {projectItem({
-          framework: 'React',
+          framework: 'NextJS',
           title: 'Inside Out NFT',
           date: '2022 / OUTR Studio',
           description: 'A website that mints NFTs in the mainnet.',
@@ -142,16 +164,15 @@ export default function Projects() {
           techStack: ['flutter', 'riverpod', 'android', 'ios'],
         })}
         {projectItem({
-          framework: 'React',
-          title: 'NextJS Project Template',
+          framework: 'NextJS',
+          title: 'Dapp Builder Template',
           date: '2022',
-          description:
-            'A template that checks errors in linting before committing to a repository.',
-          url: 'https://github.com/antonvinceguinto/project-nextjs-template',
-          techStack: ['nextjs', 'husky', 'tailwind', 'ESLint'],
+          description: 'A template for creating web3 projects.',
+          url: 'https://github.com/antonvinceguinto/dapp-builder',
+          techStack: ['nextjs', 'tailwind', 'ESLint', 'Hardhat', 'Solidity'],
         })}
         {projectItem({
-          framework: 'React',
+          framework: 'NextJS',
           title: 'My Portfolio Website',
           date: '2022',
           description: 'Checkout the source code of this website.',
