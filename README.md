@@ -1,1 +1,1 @@
-# Revel Rings NFT minting site
+My personal web portfolio
