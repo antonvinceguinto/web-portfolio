@@ -21,27 +21,27 @@ const projectItem = ({
         <div className='flex justify-between'>
           {title}
           <div className='text-green-300 flex items-center'>
-            <div className='text-sm uppercase'>{framework}</div>
+            <div className='text-lg uppercase'>{framework}</div>
             <Spacer x={0.2} />
             {/* eslint-disable-next-line no-nested-ternary */}
             {framework === 'React' ? (
-              <RiReactjsFill size={16} />
+              <RiReactjsFill size={20} />
             ) : // eslint-disable-next-line no-nested-ternary
             framework === 'NextJS' ? (
-              <TbBrandNextjs size={16} />
+              <TbBrandNextjs size={20} />
             ) : framework === 'Flutter' ? (
-              <RiFlutterFill size={16} />
+              <RiFlutterFill size={20} />
             ) : (
               <RiGithubFill />
             )}
           </div>
         </div>
-        <div className='text-gray-400 text-sm font-normal'>{date}</div>
+        <div className='text-gray-400 text-lg font-normal'>{date}</div>
       </div>
-      <Spacer y={0.6} />
-      <div className='text-gray-400'>{description}</div>
       <Spacer y={0.5} />
-      <div className='text-[#F8CA1C] text-sm flex justify-between'>
+      <div className='text-gray-400 text-lg'>{description}</div>
+      <Spacer y={0.5} />
+      <div className='text-[#F8CA1C] flex justify-between'>
         <a target='_blank' href={url} rel='noopener noreferrer'>
           Visit Project↗
         </a>
@@ -64,6 +64,15 @@ export default function Projects() {
         Personal Projects
       </div>
       <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-2 md:mt-8'>
+	  {projectItem({
+          framework: 'Flutter',
+          title: 'SLP Tracker (10k+ Installs)',
+          date: '2021 / Personal',
+          description:
+            'A flutter app that tracks SLP from a wallet. This was made for an NFT game Axie Infinity and is made using flutter.',
+          url: 'https://play.google.com/store/apps/details?id=com.gdgapps.axiescholartracker',
+          techStack: ['flutter', 'android', 'ios'],
+        })}
         {projectItem({
           framework: 'NextJS',
           title: 'NFT Wallet',
@@ -78,9 +87,9 @@ export default function Projects() {
           title: 'LTO Reviewer 2023',
           date: '2022',
           description:
-            "LTO Reviewr is the most up-to-date reviewer for the Land Transportation Office Examination. Our mission is to help future filipino drivers to pass the exam and make sure they get their driver's license.",
+            "LTO Reviewer is the most up-to-date reviewer for the Land Transportation Office Examination. Our mission is to help future filipino drivers to pass the exam and make sure they get their driver's license.",
           url: 'https://play.google.com/store/apps/details?id=com.tonbeans.lto_reviewer',
-          techStack: ['nextjs', 'solidity', 'tailwind'],
+		  techStack: ['flutter', 'android', 'ios'],
         })}
         {projectItem({
           framework: 'NextJS',
@@ -91,15 +100,7 @@ export default function Projects() {
           url: 'https://mutya.vercel.app/',
           techStack: ['nextjs', 'solidity', 'tailwind'],
         })}
-        {projectItem({
-          framework: 'Flutter',
-          title: 'SLP Tracker (10k+ Installs)',
-          date: '2021 / Personal',
-          description:
-            'A flutter app that tracks SLP from a wallet. This was made for an NFT game Axie Infinity and is made using flutter.',
-          url: 'https://play.google.com/store/apps/details?id=com.gdgapps.axiescholartracker',
-          techStack: ['flutter', 'android', 'ios'],
-        })}
+       
       </div>
       <div className='text-[1.6rem] lg:text-[3rem] font-bold mt-32'>
         Previous Work Projects
@@ -156,7 +157,7 @@ export default function Projects() {
       <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-2 md:mt-8 w-full'>
         {projectItem({
           framework: 'Flutter',
-          title: 'Movie App',
+          title: 'Flutter Movie App',
           date: '2022',
           description:
             'A flutter app that uses TMDB api with riverpod along with repository pattern.',

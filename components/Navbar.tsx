@@ -49,45 +49,26 @@ export default function Navbar() {
           </Button>
         </Modal.Footer>
       </Modal>
-      <div className='flex w-full mt-10 md:mt-0 md:px-10'>
-        <div className='flex flex-col w-full items-start justify-between md:justify-center font-bold'>
+      <div className='flex w-full fixed top-0 left-0 right-0 z-50 items-center justify-center bg-anton-black bg-opacity-70 glass-effect'>
+        <div className='flex flex-col w-full max-w-[80vw] lg:max-w-[90vw]
+		 md:mt-0 md:px-10 py-5
+		items-start justify-between md:justify-center font-bold'>
           <div className='flex w-full justify-between'>
             <div className='flex items-center'>
               <Avatar src='/images/me-pixel.png' size='lg' />
               <div className='items-center justify-center'>
-                <div className='text-xl md:text-2xl ml-4 md:ml-8'>
+                <div className='text-xl md:text-xl ml-4 md:ml-8'>
                   Anton Guinto
                 </div>
-                <div className='hidden md:block text-xs md:text-md lowercase text-gray-500 ml-4 md:ml-8'>
+                <div className='hidden md:block text-md md:text-md lowercase text-gray-500 ml-4 md:ml-8'>
                   antonvinceguinto@gmail.com
                 </div>
               </div>
             </div>
             <Button color='gradient' auto onClick={handler}>
-              <h5 className=''>About Me</h5>
+              <h5 className='text-lg'>About Me</h5>
             </Button>
-            {/* <button
-              className='py-2 px-3 flex items-center'
-              onClick={() => setIsBurgerOpen(!isBurgerOpen)}
-            >
-              {isBurgerOpen ? (
-                <VscChromeClose size={30} />
-              ) : (
-                <TiThMenu size={30} />
-              )}
-            </button> */}
           </div>
-          {/* <nav
-              className={`${
-                isBurgerOpen ? 'visible' : 'hidden'
-              } w-full mt-5 transition-all duration-150`}
-            >
-              <ul className='flex flex-col gap-1'>
-                <NavItem label='Home' />
-                <NavItem label='About' />
-                <NavItem label='Projects' />
-              </ul>
-            </nav> */}
         </div>
       </div>
     </>

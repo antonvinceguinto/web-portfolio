@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { Spacer } from '@nextui-org/react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import Introduction from '../components/Introduction';
@@ -10,7 +9,7 @@ function Home() {
   return (
     <>
       <Head>
-        <title>Anton Guinto</title>
+        <title>Anton Guinto (Tonbeans)</title>
         <meta
           name='Anton Guinto Portfolio'
           content={`Anton Guinto's Portfolio. I build web apps with react & nextjs and mobile apps with Flutter.`}
@@ -47,25 +46,16 @@ function Home() {
         />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className='md:pt-16 text-white bg-[#121212] relative'>
+      <main className='md:pt-16 text-white bg-anton-black relative w-full'>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className='flex justify-center items-center flex-col'
+          className='flex flex-col w-full max-w-[85vw] mx-auto'
         >
-          <div className='max-w-[80vw] lg:max-w-[90vw]'>
-            <div className='flex justify-center items-center'>
-              <Navbar />
-            </div>
-            <Introduction />
-          </div>
-          <Spacer y={4} />
-          {/* <Skills /> */}
-          {/* <Spacer y={3} /> */}
-          <div className='max-w-[80vw] lg:max-w-[90vw]'>
-            <Projects />
-          </div>
+          <Navbar />
+          <Introduction />
+          <Projects />
           <Footer />
         </motion.div>
       </main>

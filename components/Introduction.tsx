@@ -6,7 +6,7 @@ import BusinessCard from './BusinessCard';
 
 export default function Introduction() {
   return (
-    <div className='flex flex-col md:flex-row justify-center md:justify-between items-center min-h-[90vh] md:min-h-[75vh] md:px-10 pt-10'>
+    <div className='flex flex-col md:flex-row  md:justify-between items-center min-h-screen'>
       <div className='items-start lg:text-left flex-col'>
         <div className='gap-2 md:gap-5 text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-sans font-black flex-1 flex-col flex text-center md:text-left md:items-start'>
           <div>
@@ -16,19 +16,19 @@ export default function Introduction() {
             {`I'm`} a <span className='text-gradient'>Front-end Engineer.</span>
           </div>
           <div>
-            I use <span className='text-gradient'>React JS & Flutter</span>
+            I build <span className='text-gradient'>Mobile Apps & Websites</span>
           </div>
           <div>
-            Learning <span className='text-gradient'>Solidity.</span>
+            for <span className='text-gradient'>small</span> Businesses.
           </div>
         </div>
         <Spacer y={0.9} />
         <div className='text-gray-400 text-center md:text-left'>
-          Web2+1 / Learning Blockchain / ❤️&rsquo;s Typescript / Flutter
+          I offer services for building websites and mobile apps for small businesses.
         </div>
         <div className='cursor-pointer mt-10'>
           <Link href='/blogs' passHref>
-            <h1 className='py-2 px-5 border border-green-100 bg-green-500 w-full rounded-lg text-center'>
+            <h1 className='py-2 px-5 bg-green-600 border rounded-lg text-center max-w-lg'>
               I write Blogs (Under Improvement) 🏗️
             </h1>
           </Link>

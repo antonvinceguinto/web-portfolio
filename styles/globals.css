@@ -45,4 +45,8 @@
   .blog-container {
     @apply md:max-w-3xl lg:max-w-4xl mx-auto font-karla;
   }
+
+  .glass-effect {
+    @apply backdrop-blur-xl;
+  }
 }

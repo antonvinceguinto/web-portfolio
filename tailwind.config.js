@@ -9,6 +9,9 @@ module.exports = {
         karla: ['Karla', 'sans-serif'],
         inconsolata: ['Inconsolata', 'monospace'],
       },
+	  colors: {
+		'anton-black': '#121212',
+	  },
     },
   },
   plugins: [],
