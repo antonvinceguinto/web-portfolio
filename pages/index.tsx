@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 import Introduction from '../components/Introduction';
 import Projects from '../components/Projects';
 import Footer from '../components/Footer';
-import Calendly from '../components/calendly';
+import Calendly from '../components/Calendly';
 
 function Home() {
   return (
