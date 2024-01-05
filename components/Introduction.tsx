@@ -6,7 +6,7 @@ import BusinessCard from './BusinessCard';
 
 export default function Introduction() {
   return (
-    <div className='flex flex-col md:flex-row  md:justify-between items-center min-h-screen'>
+    <div className='flex flex-col md:flex-row md:justify-between items-center min-h-[90vh] mt-36 md:mt-0'>
       <div className='items-start lg:text-left flex-col'>
         <div className='gap-2 md:gap-5 text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-sans font-black flex-1 flex-col flex text-center md:text-left md:items-start'>
           <div>
