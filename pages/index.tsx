@@ -49,7 +49,7 @@ function Home() {
       </Head>
       <main className='md:pt-16 text-white bg-anton-black relative w-full'>
         <motion.div
-          initial={{ opacity: 0 }}z
+          initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           className='flex flex-col w-full max-w-[85vw] mx-auto'
