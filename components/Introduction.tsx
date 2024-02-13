@@ -1,6 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
-import { Spacer } from '@nextui-org/react';
 import cardStyles from './BusinessCard/business-card.module.css';
 import BusinessCard from './BusinessCard';
 
@@ -16,22 +14,23 @@ export default function Introduction() {
             {`I'm`} a <span className='text-gradient'>Front-end Engineer.</span>
           </div>
           <div>
-            I build <span className='text-gradient'>Mobile Apps & Websites</span>
+            I build <span className='text-gradient'>Mobile Apps & Websites.</span>
           </div>
-          <div>
-            for <span className='text-gradient'>small</span> Businesses.
+		  <div>
+            ...and <span className='text-gradient'>Games.</span>
           </div>
         </div>
-        <Spacer y={0.9} />
-        <div className='text-gray-400 text-center md:text-left'>
-          I offer services for building websites and mobile apps for small businesses.
-        </div>
-        <div className='cursor-pointer mt-10'>
-          <Link href='/blogs' passHref>
+        <div className='mt-10 flex'>
+          {/* <Link href='/blogs' passHref>
             <h1 className='py-2 px-5 bg-green-600 border rounded-lg text-center max-w-lg'>
               I write Blogs (Under Improvement) 🏗️
             </h1>
-          </Link>
+          </Link> */}
+		  <a href='https://www.tonbeansstudio.com/' target='_blank' rel='noopener noreferrer'>
+			<h1 className='py-2 px-8 bg-orange-600 rounded-full text-center'>
+			  Tap here to see my games 🎮 
+			</h1>
+		  </a>
         </div>
       </div>
 

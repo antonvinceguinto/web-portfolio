@@ -8,6 +8,10 @@ const styles = {
     'flex w-full max-w-[80vw] lg:max-w-[90vw] px-7 py-10 md:p-10 text-center items-center justify-center',
 };
 
+function getCurrentYear(): string {
+  return new Date().getFullYear().toString();
+}
+
 function Footer() {
   return (
     <footer className={styles.footer}>
@@ -36,7 +40,9 @@ function Footer() {
               <FaLinkedin size={32} />
             </a>
           </div>
-          <div className='mt-10 md:mt-0 text-lg'>Anton Guinto &copy; 2022</div>
+          <div className='mt-10 md:mt-0 text-lg'>
+            Anton Guinto &copy; ${getCurrentYear()}
+          </div>
         </div>
       </div>
     </footer>

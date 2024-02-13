@@ -65,7 +65,7 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
-            <Button color='gradient' auto onClick={handler}>
+            <Button color='primary' auto onClick={handler}>
               <h5 className='text-lg'>About Me</h5>
             </Button>
           </div>

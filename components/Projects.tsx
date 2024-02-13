@@ -64,7 +64,16 @@ export default function Projects() {
         Personal Projects
       </div>
       <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-2 md:mt-8'>
-	  {projectItem({
+        {projectItem({
+          framework: 'NextJS',
+          title: 'Tonbeans Studio',
+          date: 'Indie Game Dev',
+          description:
+            "A website for the games I've built. Go check them out 🎮",
+          url: 'https://tonbeansstudio.com/',
+          techStack: ['nextjs', 'solidity', 'tailwind'],
+        })}
+        {projectItem({
           framework: 'Flutter',
           title: 'SLP Tracker (10k+ Installs)',
           date: '2021 / Personal',
@@ -74,22 +83,13 @@ export default function Projects() {
           techStack: ['flutter', 'android', 'ios'],
         })}
         {projectItem({
-          framework: 'NextJS',
-          title: 'NFT Wallet',
-          date: '2022',
-          description:
-            'A NextJS Project which showcases the use of Alchemy API to fetch NFTs in different blockchains.',
-          url: 'https://nftwallet.vercel.app/',
-          techStack: ['nextjs', 'solidity', 'tailwind'],
-        })}
-        {projectItem({
           framework: 'Flutter',
           title: 'LTO Reviewer 2023',
           date: '2022',
           description:
             "LTO Reviewer is the most up-to-date reviewer for the Land Transportation Office Examination. Our mission is to help future filipino drivers to pass the exam and make sure they get their driver's license.",
           url: 'https://play.google.com/store/apps/details?id=com.tonbeans.lto_reviewer',
-		  techStack: ['flutter', 'android', 'ios'],
+          techStack: ['flutter', 'android', 'ios'],
         })}
         {projectItem({
           framework: 'NextJS',
@@ -100,7 +100,6 @@ export default function Projects() {
           url: 'https://mutya.vercel.app/',
           techStack: ['nextjs', 'solidity', 'tailwind'],
         })}
-       
       </div>
       <div className='text-[1.6rem] lg:text-[3rem] font-bold mt-32'>
         Previous Work Projects
