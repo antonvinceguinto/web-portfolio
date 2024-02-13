@@ -14,23 +14,28 @@ export default function Introduction() {
             {`I'm`} a <span className='text-gradient'>Front-end Engineer.</span>
           </div>
           <div>
-            I build <span className='text-gradient'>Mobile Apps & Websites.</span>
+            I build{' '}
+            <span className='text-gradient'>Mobile Apps & Websites.</span>
           </div>
-		  <div>
+          <div>
             ...and <span className='text-gradient'>Games.</span>
           </div>
         </div>
-        <div className='mt-10 flex'>
+        <div className='mt-10 flex items-center justify-center md:justify-start md:items-start'>
           {/* <Link href='/blogs' passHref>
             <h1 className='py-2 px-5 bg-green-600 border rounded-lg text-center max-w-lg'>
               I write Blogs (Under Improvement) 🏗️
             </h1>
           </Link> */}
-		  <a href='https://www.tonbeansstudio.com/' target='_blank' rel='noopener noreferrer'>
-			<h1 className='py-2 px-8 bg-orange-600 rounded-full text-center'>
-			  Tap here to see my games 🎮 
-			</h1>
-		  </a>
+          <a
+            href='https://www.tonbeansstudio.com/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <h1 className='py-2 px-8 bg-orange-600 rounded-full text-center'>
+              Tap here to see my games 🎮
+            </h1>
+          </a>
         </div>
       </div>
 
