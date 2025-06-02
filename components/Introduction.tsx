@@ -48,26 +48,24 @@ export default function Introduction() {
           <h1 className='hero-text'>
             <span className='block text-neutral-100'>I&apos;m a</span>
             <span className='block text-gradient-primary'>
-              Front-end Engineer.
+              Software Developer.
             </span>
           </h1>
 
           <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-100 leading-tight'>
             I build{' '}
-            <span className='text-gradient-accent'>
-              Mobile Apps & Websites.
-            </span>
+            <span className='text-gradient-accent'>Mobile Apps, Websites.</span>
           </h2>
 
-          <h3 className='text-2xl sm:text-3xl lg:text-4xl font-bold text-neutral-100'>
-            ...and <span className='text-gradient'>Games.</span>
+          <h3 className='sm:text-xl lg:text-2xl font-bold text-neutral-100'>
+            ...and <span className='text-gradient'>Mobile Games.</span>
           </h3>
         </motion.div>
 
         <motion.p variants={itemVariants} className='subtitle max-w-2xl mb-12'>
           Passionate about creating exceptional digital experiences with modern
-          technologies. I specialize in React, Next.js, Flutter, and Web3
-          development.
+          technologies. I specialize in Flutter, a mobile app development
+          framework.
         </motion.p>
 
         <motion.div
@@ -75,14 +73,14 @@ export default function Introduction() {
           className='flex flex-col sm:flex-row gap-4'
         >
           <motion.a
-            href='https://www.tonbeansstudio.com/'
+            href='https://guintocompany.com/'
             target='_blank'
             rel='noopener noreferrer'
             className='btn-primary inline-flex items-center justify-center'
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span>🎮 Checkout My Games</span>
+            <span>Guinto Company Limited</span>
           </motion.a>
 
           {/* <motion.button
