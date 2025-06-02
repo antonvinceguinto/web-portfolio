@@ -10,7 +10,7 @@ function Home() {
   return (
     <>
       <Head>
-        <title>Anton Guinto (Tonbeans)</title>
+        <title>Anton Guinto</title>
         <meta
           name='Anton Guinto Portfolio'
           content={`Anton Guinto's Portfolio. I build web apps with react & nextjs and mobile apps with Flutter.`}
