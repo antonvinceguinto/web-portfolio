@@ -1,6 +1,7 @@
+/* eslint-disable no-nested-ternary */
 import { RiFlutterFill, RiReactjsFill, RiGithubFill } from 'react-icons/ri';
 import { TbBrandNextjs } from 'react-icons/tb';
-import { Card, Spacer } from '@nextui-org/react';
+import { motion } from 'framer-motion';
 
 const projectItem = ({
   framework = '',
@@ -10,60 +11,102 @@ const projectItem = ({
   url = '',
   techStack = [''],
 }) => (
-  <Card
-    bordered
-    shadow={false}
-    hoverable
-    css={{ backgroundColor: '#1F2937', border: 'none', marginTop: '1rem' }}
+  <motion.div
+    className='card-modern p-6 h-full group'
+    whileHover={{ y: -8 }}
+    transition={{ duration: 0.3 }}
   >
-    <div className='flex-col p-2 text-white'>
-      <div className='font-bold text-2xl'>
-        <div className='flex justify-between'>
-          {title}
-          <div className='text-green-300 flex items-center'>
-            <div className='text-lg uppercase'>{framework}</div>
-            <Spacer x={0.2} />
-            {/* eslint-disable-next-line no-nested-ternary */}
-            {framework === 'React' ? (
-              <RiReactjsFill size={20} />
-            ) : // eslint-disable-next-line no-nested-ternary
-            framework === 'NextJS' ? (
-              <TbBrandNextjs size={20} />
-            ) : framework === 'Flutter' ? (
-              <RiFlutterFill size={20} />
-            ) : (
-              <RiGithubFill />
-            )}
-          </div>
+    <div className='flex flex-col h-full'>
+      <div className='flex items-start justify-between mb-4'>
+        <div className='flex-1'>
+          <h3 className='text-xl font-bold text-neutral-100 mb-2 group-hover:text-primary-400 transition-colors duration-300'>
+            {title}
+          </h3>
+          <p className='text-sm text-neutral-400 font-medium'>{date}</p>
         </div>
-        <div className='text-gray-400 text-lg font-normal'>{date}</div>
-      </div>
-      <Spacer y={0.5} />
-      <div className='text-gray-400 text-lg'>{description}</div>
-      <Spacer y={0.5} />
-      <div className='text-[#F8CA1C] flex justify-between'>
-        <a target='_blank' href={url} rel='noopener noreferrer'>
-          Visit Project↗
-        </a>
-        <div className='text-[#F8CA1C] flex gap-4 flex-wrap justify-end'>
-          {techStack.map((tech) => (
-            <div key={tech} className='p-1 px-2 rounded bg-[#151c25]'>
-              #{tech}
-            </div>
-          ))}
+
+        <div className='flex items-center space-x-2 text-primary-400'>
+          <span className='text-sm font-semibold uppercase tracking-wider'>
+            {framework}
+          </span>
+          {framework === 'React' ? (
+            <RiReactjsFill size={24} />
+          ) : framework === 'NextJS' ? (
+            <TbBrandNextjs size={24} />
+          ) : framework === 'Flutter' ? (
+            <RiFlutterFill size={24} />
+          ) : (
+            <RiGithubFill size={24} />
+          )}
         </div>
       </div>
+
+      <p className='text-neutral-300 text-sm leading-relaxed mb-6 flex-1'>
+        {description}
+      </p>
+
+      <div className='flex flex-wrap gap-2 mb-6'>
+        {techStack.map((tech) => (
+          <span
+            key={tech}
+            className='px-3 py-1 text-xs font-medium bg-gradient-to-r from-primary-500/20 to-secondary-500/20 text-primary-300 rounded-full border border-primary-500/30'
+          >
+            #{tech}
+          </span>
+        ))}
+      </div>
+
+      <motion.a
+        target='_blank'
+        href={url}
+        rel='noopener noreferrer'
+        className='inline-flex items-center text-primary-400 hover:text-primary-300 text-sm transition-colors duration-300 group/link'
+        whileHover={{ x: 4 }}
+      >
+        <span>Visit Project</span>
+        <svg
+          className='w-4 h-4 ml-2 transition-transform duration-300 group-hover/link:translate-x-1'
+          fill='none'
+          stroke='currentColor'
+          viewBox='0 0 24 24'
+        >
+          <path
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth={2}
+            d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'
+          />
+        </svg>
+      </motion.a>
     </div>
-  </Card>
+  </motion.div>
 );
+
+function ProjectSection({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <motion.section
+      className='mb-20'
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
+      <h2 className='section-title'>{title}</h2>
+      <div className='grid md:grid-cols-2 lg:grid-cols-2 gap-8'>{children}</div>
+    </motion.section>
+  );
+}
 
 export default function Projects() {
   return (
-    <div className='flex-col flex md:min-h-[30vh] items-start justify-center pb-5'>
-      <div className='text-[1.6rem] lg:text-[3rem] font-bold mt-5 md:mt-12'>
-        Personal Projects
-      </div>
-      <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-2 md:mt-8'>
+    <div className='py-20'>
+      <ProjectSection title='Personal Projects'>
         {projectItem({
           framework: 'NextJS',
           title: 'Tonbeans Studio',
@@ -100,11 +143,9 @@ export default function Projects() {
           url: 'https://mutya.vercel.app/',
           techStack: ['nextjs', 'solidity', 'tailwind'],
         })}
-      </div>
-      <div className='text-[1.6rem] lg:text-[3rem] font-bold mt-32'>
-        Previous Work Projects
-      </div>
-      <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-2 md:mt-8 w-full'>
+      </ProjectSection>
+
+      <ProjectSection title='Previous Work Projects'>
         {projectItem({
           framework: 'NextJS',
           title: 'OUTR Studios Web3',
@@ -149,11 +190,9 @@ export default function Projects() {
           url: 'https://play.google.com/store/apps/details?id=app.barcast.BarPoints&hl=en_US&gl=US',
           techStack: ['flutter', 'android', 'ios'],
         })}
-      </div>
-      <div className='text-[1.6rem] lg:text-[3rem] font-bold mt-32'>
-        Some of my opensource Github projects
-      </div>
-      <div className='sm:grid md:grid-cols-2 gap-9 justify-around items-center mt-2 md:mt-8 w-full'>
+      </ProjectSection>
+
+      <ProjectSection title='Open Source Github Projects'>
         {projectItem({
           framework: 'Flutter',
           title: 'Flutter Movie App',
@@ -179,7 +218,7 @@ export default function Projects() {
           url: 'https://github.com/antonvinceguinto/web-portfolio',
           techStack: ['reactjs', 'portfolio', 'bread'],
         })}
-      </div>
+      </ProjectSection>
     </div>
   );
 }

@@ -1,75 +1,146 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import cardStyles from './BusinessCard/business-card.module.css';
 import BusinessCard from './BusinessCard';
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: 'easeOut',
+    },
+  },
+};
+
 export default function Introduction() {
   return (
-    <div className='flex flex-col md:flex-row md:justify-between items-center min-h-[90vh] mt-36 md:mt-0'>
-      <div className='items-start lg:text-left flex-col'>
-        <div className='gap-2 md:gap-5 text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-sans font-black flex-1 flex-col flex text-center md:text-left md:items-start'>
-          <div>
-            <div className='text-[#FF4A57] text-lg md:text-xl mb-2 font-inconsolata'>
-              WELCOME!
-            </div>
-            {`I'm`} a <span className='text-gradient'>Front-end Engineer.</span>
+    <div className='min-h-screen flex flex-col lg:flex-row lg:items-center justify-center pt-24 lg:pt-0 pb-20'>
+      <motion.div
+        className='flex-1 lg:pr-16'
+        variants={containerVariants}
+        initial='hidden'
+        animate='visible'
+      >
+        <motion.div variants={itemVariants}>
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-primary-500/20 to-secondary-500/20 border border-primary-500/30 mb-8'>
+            <div className='w-2 h-2 bg-green-500 rounded-full mr-3 animate-pulse' />
+            <span className='text-primary-400 font-medium text-sm uppercase tracking-wider'>
+              Welcome
+            </span>
           </div>
-          <div>
+        </motion.div>
+
+        <motion.div variants={itemVariants} className='space-y-6 mb-12'>
+          <h1 className='hero-text'>
+            <span className='block text-neutral-100'>I&apos;m a</span>
+            <span className='block text-gradient-primary'>
+              Front-end Engineer.
+            </span>
+          </h1>
+
+          <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-100 leading-tight'>
             I build{' '}
-            <span className='text-gradient'>Mobile Apps & Websites.</span>
-          </div>
-          <div>
+            <span className='text-gradient-accent'>
+              Mobile Apps & Websites.
+            </span>
+          </h2>
+
+          <h3 className='text-2xl sm:text-3xl lg:text-4xl font-bold text-neutral-100'>
             ...and <span className='text-gradient'>Games.</span>
-          </div>
-        </div>
-        <div className='mt-10 flex items-center justify-center md:justify-start md:items-start'>
-          {/* <Link href='/blogs' passHref>
-            <h1 className='py-2 px-5 bg-green-600 border rounded-lg text-center max-w-lg'>
-              I write Blogs (Under Improvement) 🏗️
-            </h1>
-          </Link> */}
-          <a
+          </h3>
+        </motion.div>
+
+        <motion.p variants={itemVariants} className='subtitle max-w-2xl mb-12'>
+          Passionate about creating exceptional digital experiences with modern
+          technologies. I specialize in React, Next.js, Flutter, and Web3
+          development.
+        </motion.p>
+
+        <motion.div
+          variants={itemVariants}
+          className='flex flex-col sm:flex-row gap-4'
+        >
+          <motion.a
             href='https://www.tonbeansstudio.com/'
             target='_blank'
             rel='noopener noreferrer'
+            className='btn-primary inline-flex items-center justify-center'
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <h1 className='py-2 px-8 bg-orange-600 rounded-full text-center'>
-              Tap here to see my games 🎮
-            </h1>
-          </a>
-        </div>
-      </div>
+            <span>🎮 Checkout My Games</span>
+          </motion.a>
 
-      <div className='mt-10 md:ml-28'>
-        <div className='grid lg:grid xl:grid-cols-2 gap-3'>
-          <div className={cardStyles.floatingTwitter}>
+          {/* <motion.button
+            className='btn-outline inline-flex items-center justify-center'
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span>📄 View Resume</span>
+          </motion.button> */}
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        className='flex-1 mt-16 lg:mt-0 lg:pl-16'
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+      >
+        <div className='grid lg:grid xl:grid-cols-2 gap-6 max-w-2xl mx-auto lg:mx-0'>
+          <motion.div
+            className={cardStyles.floatingTwitter}
+            whileHover={{ scale: 1.05, rotate: 2 }}
+            transition={{ duration: 0.3 }}
+          >
             <BusinessCard
               username='@antonguinto'
               description='I tweet about web2+1 development. But mostly react & javascript.'
-              url='https://twitter.com/antonguinto'
               footer='Twitter'
             />
-          </div>
-          <div className={cardStyles.floatingLinkedin}>
+          </motion.div>
+
+          <motion.div
+            className={cardStyles.floatingLinkedin}
+            whileHover={{ scale: 1.05, rotate: -2 }}
+            transition={{ duration: 0.3 }}
+          >
             <BusinessCard
               username='@guinto'
               description='Let`s connect! We might build the next unicorn startup🦄.'
-              url='https://www.linkedin.com/in/guinto/'
               image='/images/linkedin-me.jpg'
-              buttonLabel='Connect'
               footer='Linkedin'
             />
-          </div>
-          <div className={`${cardStyles.floatingGithub} xl:col-span-2 lg:mt-2`}>
+          </motion.div>
+
+          <motion.div
+            className={`${cardStyles.floatingGithub} xl:col-span-2`}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          >
             <BusinessCard
               username='@antonvinceguinto'
               description='Check out what projects I&rsquo;m working on 👨‍💻. I also have some quite boring open source projects.'
-              url='https://github.com/antonvinceguinto'
               image='/images/github-me.jpg'
               footer='Github'
             />
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

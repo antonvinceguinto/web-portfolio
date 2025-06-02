@@ -1,49 +1,94 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-
-const styles = {
-  footer:
-    'mt-10 md:mt-24 flex items-center justify-center bg-[#121212] text-white w-full m-auto ',
-  wrapper:
-    'flex w-full max-w-[80vw] lg:max-w-[90vw] px-7 py-10 md:p-10 text-center items-center justify-center',
-};
 
 function getCurrentYear(): string {
   return new Date().getFullYear().toString();
 }
 
+const socialLinks = [
+  {
+    icon: FaGithub,
+    href: 'https://github.com/antonvinceguinto',
+    label: 'GitHub',
+    color: 'hover:text-neutral-300',
+  },
+  {
+    icon: FaTwitter,
+    href: 'https://twitter.com/TonbeansDev',
+    label: 'Twitter',
+    color: 'hover:text-blue-400',
+  },
+  {
+    icon: FaLinkedin,
+    href: 'https://www.linkedin.com/in/guinto/',
+    label: 'LinkedIn',
+    color: 'hover:text-blue-500',
+  },
+];
+
 function Footer() {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.wrapper}>
-        <div className='flex flex-col md:flex-row w-full justify-between items-center'>
-          <div className='flex gap-8'>
-            <a
-              target='_blank'
-              href='https://github.com/antonvinceguinto'
-              rel='noopener noreferrer'
-            >
-              <FaGithub size={32} />
-            </a>
-            <a
-              target='_blank'
-              href='https://twitter.com/antonguinto'
-              rel='noopener noreferrer'
-            >
-              <FaTwitter size={32} />
-            </a>
-            <a
-              target='_blank'
-              href='https://www.linkedin.com/in/guinto/'
-              rel='noopener noreferrer'
-            >
-              <FaLinkedin size={32} />
-            </a>
+    <footer className='relative mt-20'>
+      {/* Gradient separator */}
+      <div className='h-px bg-gradient-to-r from-transparent via-neutral-700 to-transparent mb-12' />
+
+      <div className='container-modern pb-12'>
+        <motion.div
+          className='flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0'
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          {/* Social Links */}
+          <div className='flex items-center space-x-6'>
+            {socialLinks.map(({ icon: Icon, href, label, color }) => (
+              <motion.a
+                key={label}
+                target='_blank'
+                href={href}
+                rel='noopener noreferrer'
+                className={`text-neutral-400 ${color} transition-all duration-300 p-3 rounded-full bg-neutral-800/50 hover:bg-neutral-700/50 backdrop-blur-sm`}
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label={label}
+              >
+                <Icon size={20} />
+              </motion.a>
+            ))}
           </div>
-          <div className='mt-10 md:mt-0 text-lg'>
-            Anton Guinto &copy; ${getCurrentYear()}
+
+          {/* Copyright */}
+          <div className='text-center md:text-right'>
+            <p className='text-neutral-400 text-sm'>
+              © {getCurrentYear()} Anton Guinto. All rights reserved.
+            </p>
+            <p className='text-neutral-500 text-xs mt-1'>
+              Built with Next.js & Tailwind CSS
+            </p>
           </div>
-        </div>
+        </motion.div>
+
+        {/* Additional footer content */}
+        <motion.div
+          className='mt-12 pt-8 border-t border-neutral-800/50'
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
+            <div className='flex items-center space-x-6 text-sm text-neutral-500'>
+              <span>Made with ❤️</span>
+            </div>
+
+            <div className='flex items-center space-x-4 text-xs text-neutral-500'>
+              <span>Available for freelance work</span>
+              <div className='w-2 h-2 bg-green-500 rounded-full animate-pulse' />
+            </div>
+          </div>
+        </motion.div>
       </div>
     </footer>
   );
