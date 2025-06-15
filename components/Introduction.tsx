@@ -62,35 +62,13 @@ export default function Introduction() {
           </h3>
         </motion.div>
 
-        <motion.p variants={itemVariants} className='subtitle max-w-2xl mb-12'>
-          Passionate about creating exceptional digital experiences with modern
-          technologies. I specialize in Flutter, a mobile app development
-          framework.
-        </motion.p>
-
-        <motion.div
-          variants={itemVariants}
-          className='flex flex-col sm:flex-row gap-4'
-        >
-          <motion.a
-            href='https://guintocompany.com/'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='btn-primary inline-flex items-center justify-center'
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <span>Guinto Company Limited</span>
-          </motion.a>
-
-          {/* <motion.button
-            className='btn-outline inline-flex items-center justify-center'
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <span>📄 View Resume</span>
-          </motion.button> */}
-        </motion.div>
+        {/* Divider */}
+        {/* <div className='flex justify-center px-6 pb-10'>
+          <div
+            className='w-24 h-px bg-gradient-to-r from-transparent
+		 via-gray-400 to-transparent'
+          />
+        </div> */}
       </motion.div>
 
       <motion.div
@@ -99,7 +77,8 @@ export default function Introduction() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.5 }}
       >
-        <div className='grid lg:grid xl:grid-cols-2 gap-6 max-w-2xl mx-auto lg:mx-0'>
+        {/* <div className='grid lg:grid xl:grid-cols-2 gap-6 max-w-2xl mx-auto lg:mx-0'> */}
+        <div className='space-y-16'>
           <motion.div
             className={cardStyles.floatingTwitter}
             whileHover={{ scale: 1.05, rotate: 2 }}
@@ -107,11 +86,64 @@ export default function Introduction() {
           >
             <BusinessCard
               username='@antonguinto'
-              description='I tweet about web2+1 development. But mostly react & javascript.'
-              footer='Twitter'
+              description='Kia ora! I am a software developer and designer based in New Zealand. 
+			  I specialize in Flutter, a mobile app development framework. Working on my AI skills atm!'
+              image='/images/linkedin-me.jpg'
+              footer='Developer | Designer'
             />
           </motion.div>
 
+          {/* Mobile Apps Portfolio Section */}
+          <motion.div
+            className={`${cardStyles.floatingLinkedin} group`}
+            whileHover={{
+              y: -8,
+              transition: {
+                duration: 0.3,
+                ease: 'easeOut',
+              },
+            }}
+          >
+            <div className='card-glass p-6 h-full transition-all duration-300 group-hover:shadow-glow'>
+              <div className='flex items-start space-x-4'>
+                <div className='flex-shrink-0'>
+                  <span className='text-4xl'>📱</span>
+                </div>
+                <div className='flex-1'>
+                  <h4 className='text-xl font-semibold text-neutral-100 mb-2'>
+                    Mobile App Portfolio
+                  </h4>
+                  <p className='text-neutral-300 text-sm leading-relaxed mb-4'>
+                    Detailed case studies of my mobile applications, including
+                    design process and output.
+                  </p>
+                  <motion.a
+                    href='https://guinto.tech/'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='inline-flex items-center space-x-2 text-primary-400 hover:text-primary-300 font-medium text-sm transition-colors duration-200'
+                    whileHover={{ x: 4 }}
+                  >
+                    <span>View Guinto Tech Website</span>
+                    <svg
+                      className='w-4 h-4'
+                      fill='none'
+                      stroke='currentColor'
+                      viewBox='0 0 24 24'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'
+                      />
+                    </svg>
+                  </motion.a>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+          {/* 
           <motion.div
             className={cardStyles.floatingLinkedin}
             whileHover={{ scale: 1.05, rotate: -2 }}
@@ -119,7 +151,7 @@ export default function Introduction() {
           >
             <BusinessCard
               username='@guinto'
-              description='Let`s connect! We might build the next unicorn startup🦄.'
+              description='Let`s connect! 🦄.'
               image='/images/linkedin-me.jpg'
               footer='Linkedin'
             />
@@ -132,11 +164,11 @@ export default function Introduction() {
           >
             <BusinessCard
               username='@antonvinceguinto'
-              description='Check out what projects I&rsquo;m working on 👨‍💻. I also have some quite boring open source projects.'
+              description='Check out what projects I&rsquo;m working on 👨‍💻.'
               image='/images/github-me.jpg'
               footer='Github'
             />
-          </motion.div>
+          </motion.div> */}
         </div>
       </motion.div>
     </div>

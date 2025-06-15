@@ -1,7 +1,29 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import BounceAnimation from './BounceAnimation';
 
 export default function LetsWorkTogether() {
+  const [copied, setCopied] = useState(false);
+  const email = 'antonvinceguinto@gmail.com';
+
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = email;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
+
   return (
     <BounceAnimation>
       <motion.section
@@ -12,45 +34,35 @@ export default function LetsWorkTogether() {
         transition={{ duration: 0.6 }}
       >
         <div className='text-center mb-16'>
-          <h2 className='section-title text-center'>
-            Let&apos;s Work Together
-          </h2>
-          <p className='subtitle text-center max-w-2xl mx-auto'>
-            Ready to bring your ideas to life? I&apos;m always excited to work
-            on new projects and collaborate with amazing people. projects and
-            collaborate with amazing people.
-          </p>
-        </div>
-
-        <motion.div
-          className='text-center mt-16'
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          <motion.a
-            href='mailto:antonvinceguinto@gmail.com'
-            className='btn-primary inline-flex items-center justify-center text-lg px-8 py-4'
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <h2 className='section-title text-center'>Contact Me</h2>
+          <motion.button
+            onClick={copyToClipboard}
+            className='subtitle text-center max-w-2xl mx-auto underline cursor-pointer hover:text-primary-400 transition-colors duration-200 relative group'
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ duration: 0.1 }}
           >
-            <span>Get In Touch</span>
-            <svg
-              className='w-5 h-5 ml-2'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M12 19l9 2-9-18-9 18 9-2zm0 0v-8'
-              />
-            </svg>
-          </motion.a>
-        </motion.div>
+            {email}
+
+            {/* Tooltip */}
+            <div className='absolute -top-12 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none'>
+              <div className='bg-neutral-800 text-white text-sm px-3 py-1 rounded-lg shadow-lg whitespace-nowrap'>
+                {copied ? 'Copied!' : 'Click to copy'}
+                <div className='absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-800' />
+              </div>
+            </div>
+          </motion.button>
+
+          {/* Success message */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: copied ? 1 : 0, y: copied ? 0 : 10 }}
+            transition={{ duration: 0.2 }}
+            className='mt-4 text-green-400 text-sm font-medium'
+          >
+            ✓ Email copied to clipboard!
+          </motion.div>
+        </div>
       </motion.section>
     </BounceAnimation>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 function getCurrentYear(): string {
   return new Date().getFullYear().toString();
@@ -12,12 +12,6 @@ const socialLinks = [
     href: 'https://github.com/antonvinceguinto',
     label: 'GitHub',
     color: 'hover:text-neutral-300',
-  },
-  {
-    icon: FaTwitter,
-    href: 'https://twitter.com/TonbeansDev',
-    label: 'Twitter',
-    color: 'hover:text-blue-400',
   },
   {
     icon: FaLinkedin,
@@ -81,11 +75,6 @@ function Footer() {
           <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
             <div className='flex items-center space-x-6 text-sm text-neutral-500'>
               <span>Made with ❤️</span>
-            </div>
-
-            <div className='flex items-center space-x-4 text-xs text-neutral-500'>
-              <span>Available for freelance work</span>
-              <div className='w-2 h-2 bg-green-500 rounded-full animate-pulse' />
             </div>
           </div>
         </motion.div>

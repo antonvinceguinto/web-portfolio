@@ -12,7 +12,7 @@ const projectItem = ({
   techStack = [''],
 }) => (
   <motion.div
-    className='card-modern p-6 h-full group'
+    className='card-modern p-6 h-full group hover:shadow-glow transition-all duration-300'
     whileHover={{ y: -8 }}
     transition={{ duration: 0.3 }}
   >
@@ -109,12 +109,12 @@ export default function Projects() {
       <ProjectSection title='Personal Projects'>
         {projectItem({
           framework: 'NextJS',
-          title: 'Tonbeans Studio',
+          title: 'Guinto Games',
           date: 'Indie Game Dev',
           description:
             "A website for the games I've built. Go check them out 🎮",
-          url: 'https://tonbeansstudio.com/',
-          techStack: ['nextjs', 'solidity', 'tailwind'],
+          url: 'https://guinto.games/',
+          techStack: ['unity', 'nextjs', 'solidity', 'tailwind'],
         })}
         {projectItem({
           framework: 'Flutter',
@@ -146,6 +146,15 @@ export default function Projects() {
       </ProjectSection>
 
       <ProjectSection title='Previous Work Projects'>
+        {projectItem({
+          framework: 'Flutter',
+          title: 'Nextminute',
+          date: '2022 - Present',
+          description:
+            'A Job Management App catering for Tradies in New Zealand and Australia.',
+          url: 'https://nextminute.com/',
+          techStack: ['flutter', 'android', 'ios'],
+        })}
         {projectItem({
           framework: 'NextJS',
           title: 'OUTR Studios Web3',
